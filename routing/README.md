@@ -17,7 +17,11 @@ Elevation
     ```
 5. Convert to ASC
    ```
-   gdal_translate -of AAIGrid reprojected.tif reprojected.asc
+   gdal_translate -of AAIGrid -ot Int32 reprojected.tif reprojected.asc
+   gdal_calc.py reprojected.asc 1000*A
+   sed -i "s/^ //" reprojected.asc
+   sed -i "s/-2147483648/0/g" reprojected.asc
+   tail -n+7 reprojected.asc
    ``` 
    
 Information about reprojected.tif
