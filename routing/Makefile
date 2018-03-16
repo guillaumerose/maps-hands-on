@@ -1,7 +1,7 @@
-all: paris.osm.pbf
+all: run
 
 clean:
-	rm -rf _osmosis *.osm.pbf
+	rm -rf _osmosis *.osm.pbf *.osrm*
 
 ile-de-france-latest.osm.pbf:
 	wget http://download.geofabrik.de/europe/france/ile-de-france-latest.osm.pbf
@@ -12,3 +12,13 @@ _osmosis/bin/osmosis:
 
 paris.osm.pbf: _osmosis/bin/osmosis ile-de-france-latest.osm.pbf
 	./_osmosis/bin/osmosis --read-pbf ile-de-france-latest.osm.pbf --bounding-box left=2.24 bottom=48.81 right=2.43 top=48.91 --write-pbf paris.osm.pbf
+
+/data/paris.osrm: paris.osm.pbf
+	docker run -t -v $(shell pwd):/data osrm/osrm-backend osrm-extract -p /opt/bicycle.lua /data/paris.osm.pbf
+	docker run -t -v $(shell pwd):/data osrm/osrm-backend osrm-partition /data/paris.osrm
+	docker run -t -v $(shell pwd):/data osrm/osrm-backend osrm-customize /data/paris.osrm
+
+run: /data/paris.osrm
+	docker run -d -p 9966:9966 osrm/osrm-frontend
+	docker run -d -t -i -p 5000:5000 -v $(shell pwd):/data osrm/osrm-backend osrm-routed --algorithm mld /data/paris.osrm
+	open http://127.0.0.1:9966

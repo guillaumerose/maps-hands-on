@@ -1,2 +1,3 @@
 _osmosis
 *.osm.pbf
+*.osrm*
