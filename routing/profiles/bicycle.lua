@@ -595,14 +595,31 @@ function process_segment (profile, segment)
   local scaled_weight = segment.weight
   local scaled_duration = segment.duration
 
+  local penalize = 0
+  local sign = 1
+
   if sourceData.datum > 0 and targetData.datum > 0 then
-    local slope = (targetData.datum - sourceData.datum) / segment.distance / 1000.0
-    scaled_weight = scaled_weight / (1.0 - (slope * 5.0))
-    scaled_duration = scaled_duration / (1.0 - (slope * 5.0))
+      local elev_delta = targetData.datum - sourceData.datum
+
+      slope = math.abs(elev_delta / segment.distance) / 1000.0
+      if elev_delta < 0 then
+         slope = slope / 3
+         sign = -1
+      end
+
+      if slope < 0.01 then
+         penalize = 0
+      elseif slope < 0.05 then
+         penalize = 0.25
+      elseif slope < 0.1 then
+         penalize = 0.65
+      else
+         penalize = 0.9
+      end
   end
 
-  segment.weight = scaled_weight
-  segment.duration = scaled_duration
+  segment.weight = segment.weight * (1 + sign * penalize)
+  segment.duration = segment.duration * (1 + sign * penalize)
 end
 
 return {
