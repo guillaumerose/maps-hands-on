@@ -10,7 +10,7 @@ mkdir -p ~/maps-hands-on/search/installation/docker
 ```
 2. Copier/coller l'archive __devoxx_search_docker_images.tar.gz__ dans le répertoire docker
 ```
-cp DEVOXX_SUPPORT/docker/devoxx_search_docker_images.tar.gz ~/devoxx/search/docker
+cp DEVOXX_SUPPORT/docker/devoxx_search_docker_images.tar.gz ~/maps-hands-on/search/installation/docker
 ```
 3. Décompresser l'archive
 ```

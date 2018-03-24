@@ -1,18 +1,26 @@
 # Reconstruire Google Maps en moins de 3 heures (Devoxx France 2018)
 
 ## Ajout des données dans Pelias (partie 3/4)
-Pelias est prêt à recevoir la données __OSM/Paris__.
+Pelias est prêt à recevoir les données __OSM/Paris__.
 
 ### Importation des données
-1. Copier/coller le fichier des données __OSM/Paris__ dans le répertoire d'Elasticsearch
+1. Créer le répertoire de données __OpenStreetMap__
 ```
-cp DEVOXX_SUPPORT/data/paris.osm.pbf ~/devoxx/search/data/openstreetmap/
+mkdir -p ~/maps-hands-on/search/installation/data/openstreetmap
 ```
-2. Importer la donnée de __OSM/Paris__ dans __Elasticsearch__
+2. Copier/coller le fichier des données __OSM/Paris__ dans le répertoire d'Elasticsearch
+```
+cp DEVOXX_SUPPORT/data/paris.osm.pbf ~/maps-hands-on/search/installation/data/openstreetmap
+```
+3. Importer les données __OSM/Paris__ dans __ElasticSearch__
 ```
 docker-compose run --rm openstreetmap npm start
 ```
-3. Tester la présence de données OSM Paris
+4. Tester la présence de __Poi__
+```
+curl http://localhost:4000/v1/search?text=pharmacie
+```
+5. Tester la présence __d'une adresse__
 ```
 curl http://localhost:4000/v1/search?text=rue%20de%20la%20pompe
 ```

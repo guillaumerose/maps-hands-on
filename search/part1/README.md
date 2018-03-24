@@ -6,11 +6,11 @@ Pour fonctionner à minimum, Pelias a besoin d'allumer deux conteneurs : le cont
 ### Préparation des assets et lancement des services
 1. Créer le répertoire des données
 ```
-mkdir -p ~/devoxx/search/data
+mkdir -p ~/maps-hands-on/search/data
 ```
 2. Faire pointer la variable __DATA_DIR__ dans le fichier __.env__ sur le répertoire de données
 ```
-DATA_DIR=~/devoxx/search/data
+DATA_DIR=~/maps-hands-on/search/data
 ```
 3. Allumer le conteneur __Elasticsearch__
 ```
@@ -24,7 +24,11 @@ docker-compose run --rm schema npm run create_index
 ```
 docker-compose up -d api
 ```
-6. Tester la présence de Pelias
+6. Faire un état des lieux des conteneurs en cours
+```
+docker-compose ps
+```
+7. Tester la présence de Pelias
 ```
 curl http://localhost:4000/v1/search?text=pharmacie
 ```
