@@ -3,25 +3,20 @@
 ## Configuration de Pelias (partie 2/4)
 Pour fonctionner à minimum, Pelias a besoin d'allumer deux conteneurs : le conteneur ElasticSearch et le conteneur API, qui a en charge d'orchestrer les requêtes utilisateurs.
 
-### Configuration de Pelias
-
-1. Créer le répertoire contenant la donnée __Paris__
+### Préparation des assets et lancement des services
+1. Créer le répertoire des données
 ```
 mkdir -p ~/devoxx/search/data
 ```
-2. Faire pointer la variable d'environnement dans le fichier __.env__
+2. Faire pointer la variable __DATA_DIR__ dans le fichier __.env__ sur le répertoire de données
 ```
 DATA_DIR=~/devoxx/search/data
 ```
-3. Copier/coller le fichier __paris.osm.pbf__
-```
-cp DEVOXX_SUPPORT/data/paris.osm.pbf ~/devoxx/search/data
-```
-4. Allumer le conteneur __Elasticsearch__
+3. Allumer le conteneur __Elasticsearch__
 ```
 docker-compose up -d elasticsearch
 ```
-5. Créer le schéma __Elasticsearch__
+4. Créer le schéma __Elasticsearch__
 ```
 docker-compose run --rm schema npm run create_index
 ```
