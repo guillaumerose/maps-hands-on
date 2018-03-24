@@ -3,7 +3,7 @@
 ## Configuration de Pelias (partie 2/4)
 Pour fonctionner à minimum, Pelias a besoin d'allumer deux conteneurs : le conteneur ElasticSearch et le conteneur API, qui a en charge d'orchestrer les requêtes utilisateurs.
 
-### Restauration des images Docker
+### Configuration de Pelias
 
 1. Créer le répertoire contenant la donnée __Paris__
 ```
