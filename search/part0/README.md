@@ -20,7 +20,7 @@ gunzip devoxx_search_docker_images.tar.gz
 ```
 docker load --input devoxx_search_docker_images.tar
 ```
-Nous sommes prêts à configurer Pelias, rendez-vous à la partie 2...
+Nous sommes prêts à configurer Pelias. Rendez-vous à la partie 2...
 
 ### Création des images Docker 
 1. Créer le répertoire contenant les conteneurs
