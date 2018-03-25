@@ -14,7 +14,7 @@ DATA_DIR=~/maps-hands-on/search/data
 ```
 3. Allumer le conteneur __ElasticSearch__
 ```
-docker-compose up -d elasticearch
+docker-compose up -d elasticsearch
 ```
 4. Créer le schéma __ElasticSearch__
 ```
