@@ -12,11 +12,11 @@ mkdir -p ~/maps-hands-on/search/data
 ```
 DATA_DIR=~/maps-hands-on/search/data
 ```
-3. Allumer le conteneur __Elasticsearch__
+3. Allumer le conteneur __ElasticSearch__
 ```
-docker-compose up -d elasticsearch
+docker-compose up -d elasticearch
 ```
-4. Créer le schéma __Elasticsearch__
+4. Créer le schéma __ElasticSearch__
 ```
 docker-compose run --rm schema npm run create_index
 ```

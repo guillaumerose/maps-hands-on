@@ -8,7 +8,7 @@ Pelias est prêt à recevoir les données __OSM/Paris__.
 ```
 mkdir -p ~/maps-hands-on/search/installation/data/openstreetmap
 ```
-2. Copier/coller le fichier des données __OSM/Paris__ dans le répertoire d'Elasticsearch
+2. Copier/coller le fichier des données __OSM/Paris__ dans le répertoire d'ElasticSearch
 ```
 cp DEVOXX_SUPPORT/data/paris.osm.pbf ~/maps-hands-on/search/installation/data/openstreetmap
 ```
