@@ -4,9 +4,9 @@
 Pour fonctionner à minimum, Pelias a besoin d'allumer deux conteneurs : le conteneur ElasticSearch et le conteneur API, qui a en charge d'orchestrer les requêtes utilisateurs.
 
 ### Préparation des assets et lancement des services
-1. Créer le répertoire des données
+1. Cloner le projet Pelias Dockerfiles dans ~/maps-hands-on/search/
 ```
-mkdir -p ~/maps-hands-on/search/data
+git clone https://github.com/pelias/dockerfiles.git ~/maps-hands-on/search/
 ```
 2. Faire pointer la variable __DATA_DIR__ dans le fichier __.env__ sur le répertoire de données
 ```

@@ -6,7 +6,7 @@ Pour préparer le hands-on, nous allons récupérer les sources sur github et d�
 
 Récupérer les sources sur github
 ```
-git clone https://github.com/maps-hands-on/maps-hands-on/
+git clone https://github.com/maps-hands-on/maps-hands-on/ ~/maps-hands-on
 ```
 Placez-vous dans le répertoire __search__ et listez le. La structure se décompose ainsi :
 ```
