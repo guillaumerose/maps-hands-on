@@ -28,3 +28,4 @@ drwxrwxr-x 2 ulrich ulrich 4,0K mars  25 00:59 part2/
 - part0 : partie initialisation des services Docker,
 - part1 : partie initialisation des services Pelias,
 - part2 : partie importation des données OpenStreetMap,
+- part3 : partie intégration du champ de recherche sur la carte,
