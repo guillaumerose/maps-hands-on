@@ -19,6 +19,8 @@ drwxrwxr-x 2 you you 4,0K mars  01 00:00 part1/
   +--rw-rw-r-- 1 you you 1,1K mars  00 00:00 README.md
 drwxrwxr-x 2 you you 4,0K mars  01 00:00 part2/
   +--rw-rw-r-- 1 you you 1,1K mars  01 00:00 README.md
+drwxrwxr-x 2 you you 4,0K mars  01 00:00 part3/
+  +--rw-rw-r-- 1 you you 1,1K mars  01 00:00 README.md
 -rw-rw-r-- 1 you ulrich  202 mars  01 00:00 README.md
 ```
 - installation : contient la configuration Docker, Pelias et les données,
