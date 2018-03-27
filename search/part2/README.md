@@ -4,23 +4,19 @@
 Pelias est prêt à recevoir les données __OSM/Paris__.
 
 ### Importation des données
-1. Créer le répertoire de données __OpenStreetMap__
-```
-mkdir -p ~/maps-hands-on/search/installation/data/openstreetmap
-```
-2. Copier/coller le fichier des données __OSM/Paris__ dans le répertoire d'ElasticSearch
+1. Copier/coller le fichier des données __OSM/Paris__ dans le répertoire d'ElasticSearch
 ```
 cp DEVOXX_SUPPORT/data/paris.osm.pbf ~/maps-hands-on/search/installation/data/openstreetmap
 ```
-3. Importer les données __OSM/Paris__ dans __ElasticSearch__
+2. Importer les données __OSM/Paris__ dans __ElasticSearch__
 ```
 docker-compose run --rm openstreetmap npm start
 ```
-4. Tester la présence de __Poi__
+3. Tester la présence de __Poi__
 ```
 curl http://localhost:4000/v1/search?text=pharmacie
 ```
-5. Tester la présence __d'une adresse__
+4. Tester la présence __d'une adresse__
 ```
 curl http://localhost:4000/v1/search?text=rue%20de%20la%20pompe
 ```

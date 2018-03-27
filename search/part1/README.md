@@ -6,11 +6,11 @@ Pour fonctionner à minimum, Pelias a besoin d'allumer deux conteneurs : le cont
 ### Préparation des assets et lancement des services
 1. Cloner le projet Pelias Dockerfiles dans ~/maps-hands-on/search/
 ```
-git clone https://github.com/pelias/dockerfiles.git ~/maps-hands-on/search/
+git clone https://github.com/pelias/dockerfiles.git ~/maps-hands-on/search/installation/pelias
 ```
 2. Faire pointer la variable __DATA_DIR__ dans le fichier __.env__ sur le répertoire de données
 ```
-DATA_DIR=~/maps-hands-on/search/data
+DATA_DIR=~/maps-hands-on/search/installation/data
 ```
 3. Allumer le conteneur __ElasticSearch__
 ```
