@@ -8,10 +8,6 @@ Pelias est prêt à recevoir les données __OSM/Paris__.
 ```
 cp DEVOXX_SUPPORT/data/paris.osm.pbf ~/maps-hands-on/search/installation/data/openstreetmap/
 ```
-2. Modifier la configuration OpenStreetMap dans le fichier __pelias.json__ pour utiliser le fichier paris.osm.pbf
-```
-Indiquer le fichier paris.osm.pbf dans le noeud "imports.openstreetmap.import.filename"
-```
 3. Importer les données __OSM/Paris__ dans __ElasticSearch__
 ```
 docker-compose run --rm openstreetmap npm start

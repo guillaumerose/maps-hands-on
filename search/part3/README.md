@@ -11,9 +11,9 @@ A noter que le marqueurs sont cliquables pour en connaitre l'identité.
 ### Quelques tests d'abord
 1. Lancez la commande suivante pour tester le parsing des résultats
 ```
-$ python -m SimpleHTTPServer 8000
+python -m SimpleHTTPServer 8000
 ```
-1. Procéder à quelques reqêtes (pharmacie, rue de vaugirard)
+2. Procéder à quelques reqêtes (pharmacie, rue de vaugirard)
 ```
 rue de sèvres
 rue de sevre
@@ -30,4 +30,4 @@ exec, clearMap, search, render et updateMap
 Inspirez vous de la méthode précédente en attachant les fonctions avec JQuery par exemple.
 ...
 ```
-Fellicications, vous avez entre les mains un champ de recherche rudimentaire, qui repose sur la données OpenStreetMap. Si vous en avez envi, rendez-vous à la partie 5 pour voir comment le personnaliser...
+Fellicications, vous avez entre les mains un champ de recherche qui repose sur la données OpenStreetMap. Si vous en avez envi, rendez-vous à la partie 5 pour voir comment le personnaliser...
