@@ -43,14 +43,17 @@
             $.ajax({
                 url: 'http://localhost:4000/v1/search',
                 method: 'GET',
-                data: { text: text },
+                data: { text: text, size: 25, 'boundary.circle.lat': 48.853, 'boundary.circle.lon': 2.35, 'boundary.circle.radius': 10 },
                 headers: { 'Accept': 'application/json' }
             }).done(cb);
         }
 
         function render(bbox, features) {
             console.info('Rendering pois and map');
-            _.each(features, function (feature) {
+            var filtered = _.filter(features, function (feature) {
+                return (feature.properties.confidence >= 0.5);
+            });
+            _.each(filtered, function (feature) {
                 L.marker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]).bindPopup(feature.properties.name).addTo(document.poiLayer);
             });
             updateMap(bbox);
