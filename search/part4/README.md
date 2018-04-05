@@ -7,7 +7,7 @@ La source de données est disponible au format CSV à l'URL suivante :  https://
 
 Deux options s'offrent à vous, vous pouvez essayer de convertir la donnée STIF ou récupérer le fichier PBF généré par votre serviteur sur le support, le copier à l'endroit indiqué ci-dessous et aller directement au paragraphe __Intégration des données STIF__
 ```
-cp DEVOXX_SUPPORT/search/data/stif/zde-ref-idf.osm.pbf ~/maps-hands-on/search/installation/data/openstreetmap/
+cp DEVOXX_SUPPORT/search/data/stif/zde-ref-idf.osm.pbf ~/maps-hands-on/search/part4/zde-ref-idf.osm.pbf
 ```
 
 ### Conversion des données __STIF__
@@ -39,7 +39,7 @@ Nous diposons à présent d'un fichier PBF d'environ 460Ko compatible Pelias.
 ```
 mv ~/maps-hands-on/search/part4/zde-ref-idf.osm.pbf ~/maps-hands-on/search/installation/data/openstreetmap/
 ```
-2. Modifier la configuration OpenStreetMap dans le fichier __pelias.json__ pour ajouter le fichier zde-ref-idf.osm.pbf
+2. Modifier la configuration OpenStreetMap dans le fichier __pelias.json__ afin d'ajouter le fichier zde-ref-idf.osm.pbf
 ```
 Ajouter le fichier zde-ref-idf.osm.pbf dans le noeud "imports.openstreetmap.import.filename"
 ```
