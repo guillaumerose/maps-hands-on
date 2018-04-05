@@ -48,7 +48,7 @@
    "sources":{
       "openmaptiles":{
          "type":"vector",
-         "url":"http://localhost:8081/v3.json"
+         "url":"http://localhost:8080/v3.json"
       }
    },
    "sprite":"http://localhost:8080/styles/osm-bright/sprite",

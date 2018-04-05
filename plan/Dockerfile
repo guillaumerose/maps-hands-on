@@ -1,4 +1,3 @@
-FROM nginx
-ADD static/ /usr/share/nginx/html/
-RUN chmod 555 -R /usr/share/nginx/html/*
-CMD ["nginx", "-g", "daemon off;"]
+FROM nginx:alpine
+COPY static/ /usr/share/nginx/html/
+COPY nginx.conf /etc/nginx/conf.d/default.conf
