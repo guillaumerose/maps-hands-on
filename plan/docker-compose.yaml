@@ -9,6 +9,8 @@ services:
       - ./static/:/usr/share/nginx/html/
 
   tiles:
-    image: klokantech/openmaptiles-server
+    image: klokantech/tileserver-gl
+    ports:
+      - 8081:80
     volumes:
       - ./data:/data
