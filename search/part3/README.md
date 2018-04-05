@@ -6,7 +6,7 @@ En ajoutant un simple champ de recherche en overlay sur la carte, nous sommes en
 - Transformer la réponse JSon de Pelias en __marker__ sur la carte,
 - Ressérer la carte sur la zone, qui encadre l'ensemble des Pois.
 
-A noter que le marqueurs sont cliquables pour en connaitre l'identité.
+A noter que le marqueurs sont cliquables afin d'en connaitre l'identité.
 
 ### Quelques tests d'abord
 1. Lancez la commande suivante pour tester le parsing des résultats
