@@ -5,6 +5,11 @@ Il est bien entendu possible d'ajouter nos propres données au moteur de recherc
 
 La source de données est disponible au format CSV à l'URL suivante :  https://opendata.stif.info/explore/dataset/zde-ref-idf/.
 
+Deux options s'offrent à vous, vous pouvez essayer de convertir la donnée STIF ou récupérer le fichier PBF généré par votre serviteur sur le support, le copier à l'endroit indiqué ci-dessous et aller directement au paragraphe __Intégration des données STIF__
+```
+cp DEVOXX_SUPPORT/search/data/stif/zde-ref-idf.osm.pbf ~/maps-hands-on/search/installation/data/openstreetmap/
+```
+
 ### Conversion des données __STIF__
 Pour rendre la donnée STIF compatible avec le format OpenStreetMap, il faut au préalable la convertir au moyen du programme [osmconvert](https://wiki.openstreetmap.org/wiki/Osmconvert). Une version Linux 64bits est disponible sur le support, mais si votre architecture est différente, il faut le compiler, comme indiqué sur le Wiki de l'outil.
 1. Copier/coller le programme __osmconvert64__ dans le répertoire part4
