@@ -1,6 +1,6 @@
 # Reconstruire Google Maps en moins de 3 heures (Devoxx France 2018)
 
-## Configuration de Pelias (partie 2/4)
+## Configuration de Pelias (partie 1/4)
 Pour fonctionner à minimum, Pelias a besoin d'allumer deux conteneurs : le conteneur ElasticSearch et le conteneur API, qui a en charge d'orchestrer les requêtes utilisateurs.
 
 ### Préparation des assets et lancement des services
@@ -32,4 +32,4 @@ docker-compose ps
 ```
 curl http://localhost:4000/v1/search?text=pharmacie | jq
 ```
-Cool, nous avons un serveur opérationnel mais sans données ! Rendez-vous à la partie 3...
+Cool, nous avons un serveur opérationnel mais sans données ! Rendez-vous à la partie 2...

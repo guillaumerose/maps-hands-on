@@ -1,6 +1,6 @@
 # Reconstruire Google Maps en moins de 3 heures (Devoxx France 2018)
 
-## Ajout de données personnalisées (partie 5/4)
+## Ajout de données personnalisées (partie 4/4)
 Il est bien entendu possible d'ajouter nos propres données au moteur de recherche. Pour le démontrer, nous allons intégrer les zones d'embarquements __STIF__ disponibles en OpenData. Il s'agit d'un petit bout de la donnée accessible, mais cela sera suffisant pour notre exemple.
 
 La source de données est disponible au format CSV à l'URL suivante :  https://opendata.stif.info/explore/dataset/zde-ref-idf/.
@@ -47,4 +47,4 @@ Ajouter le fichier zde-ref-idf.osm.pbf dans le noeud "imports.openstreetmap.impo
 ```
 docker-compose run --rm openstreetmap npm start
 ```
-Chercher à présent les arrêts STIF via requête suivante  : arrêt stif
+Chercher à présent les arrêts STIF via requête suivante par exemple : arrêt stif
