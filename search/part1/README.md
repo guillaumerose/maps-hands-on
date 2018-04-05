@@ -30,6 +30,6 @@ docker-compose ps
 ```
 7. Tester la présence de Pelias
 ```
-curl http://localhost:4000/v1/search?text=pharmacie
+curl http://localhost:4000/v1/search?text=pharmacie | jq
 ```
 Cool, nous avons un serveur opérationnel mais sans données ! Rendez-vous à la partie 3...

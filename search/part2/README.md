@@ -18,10 +18,10 @@ docker-compose run --rm openstreetmap npm start
 ```
 4. Tester la présence de __Poi__
 ```
-curl http://localhost:4000/v1/search?text=pharmacie
+curl http://localhost:4000/v1/search?text=pharmacie | jq
 ```
 5. Tester la présence __d'une adresse__
 ```
-curl http://localhost:4000/v1/search?text=rue%20lecourbe
+curl http://localhost:4000/v1/search?text=rue%20lecourbe | jq
 ```
 Youpi, notre service de recherche est prêt à s'intégrer dans notre interface. Rendez-vous à la partie 4...
