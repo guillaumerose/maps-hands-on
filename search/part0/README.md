@@ -6,7 +6,7 @@ La construction des images Docker de Pelias doit se faire sur une machine robust
 ### Restauration des images Docker
 1. Copier/coller l'archive __devoxx_search_docker_images.tar.gz__ dans le répertoire ~/maps-hands-on/search/installation/docker
 ```
-cp DEVOXX_SUPPORT/docker/devoxx_search_docker_images.tar.gz ~/maps-hands-on/search/installation/docker
+cp DEVOXX_SUPPORT/search/docker/devoxx_search_docker_images.tar.gz ~/maps-hands-on/search/installation/docker
 ```
 2. Décompresser l'archive
 ```
