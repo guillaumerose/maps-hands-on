@@ -51,7 +51,7 @@
         function render(bbox, features) {
             console.info('Rendering pois and map');
             var filtered = _.filter(features, function (feature) {
-                return (feature.properties.confidence >= 0.5);
+                return (feature.properties.confidence >= 0.9);
             });
             _.each(filtered, function (feature) {
                 L.marker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]).bindPopup(feature.properties.name).addTo(document.poiLayer);
