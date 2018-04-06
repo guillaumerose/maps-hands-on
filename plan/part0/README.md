@@ -35,4 +35,15 @@ $
 ```
 $ cd ~/maps-hands-on/plan/part0
 $ docker-compose up
+Starting part0_web_1 ... 
+Starting part0_tiles_1 ... done
+Attaching to part0_web_1, part0_tiles_1
+tiles_1  | Waiting 3 seconds for xvfb to start...
+tiles_1  | Starting tileserver-gl v2.3.1
+tiles_1  | No MBTiles specified, using 2017-07-03_france_ile-de-france.mbtiles
+tiles_1  | Automatically creating config file for 2017-07-03_france_ile-de-france.mbtiles
+tiles_1  | Run with --verbose to see the config file here.
+tiles_1  | Starting server
+tiles_1  | Listening at http://[::]:80/
+tiles_1  | Startup complete
 ```
