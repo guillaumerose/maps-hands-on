@@ -1,8 +1,6 @@
-# Reconstruire Google Maps en moins de 3 heures (Devoxx France 2018)
-
 ## Ajout d'un champ de recherche simple (partie 3/4)
 En ajoutant un simple champ de recherche en overlay sur la carte, nous sommes en mesure d'interroger Pelias. La séquence de traitement est la suivante :
-- Interroger le serveur Pelias, qui délègurea à ElasticSearch le traitement de la requête,
+- Interroger le serveur Pelias, qui délèguera à ElasticSearch le traitement de la requête,
 - Transformer la réponse JSon de Pelias en __marker__ sur la carte,
 - Ressérer la carte sur la zone, qui encadre l'ensemble des Pois.
 
