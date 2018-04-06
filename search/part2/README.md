@@ -14,7 +14,7 @@ Remplacer la référence au fichier `portland_oregon.osm.pbf` par `paris.osm.pbf
 ```
 docker-compose run --rm openstreetmap npm start
 ```
-4. Tester la présence de __Poi__
+4. Tester la présence de __POI__ (_Points of Interest_)
 ```
 curl http://localhost:4000/v1/search?text=pharmacie | jq
 ```
@@ -22,4 +22,4 @@ curl http://localhost:4000/v1/search?text=pharmacie | jq
 ```
 curl http://localhost:4000/v1/search?text=rue%20lecourbe | jq
 ```
-Youpi, notre service de recherche est prêt à s'intégrer dans notre interface. Rendez-vous à la partie 3...
+Youpi ! Notre service de recherche est prêt à s'intégrer dans notre interface. Rendez-vous à la partie 3...
