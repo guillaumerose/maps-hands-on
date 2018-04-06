@@ -1,7 +1,9 @@
-Bike to Montmartre
+En vélo à Montmartre
 ===
 
-![GitHub Logo](paris.png)
+![Altitudes de Paris](paris.png)
+
+Nous allons modifier le calcul d'itinéraire pour minimiser les montées et descentes en vélo.
 
 Préparer les données
 ----
