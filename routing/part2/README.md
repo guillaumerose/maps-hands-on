@@ -3,30 +3,46 @@ Bike to Montmartre
 
 ![GitHub Logo](paris.png)
 
-Get the data
+Préparer les données
 ----
 
-Copy it from the part 1.
+Copiez les données de la première partie.
 
 ```
-cp ../part1/paris.osm.pbf .
+$ cd ~/maps-hands-on/routing/part2
+$ cp ~/maps-hands-on/plan/data/paris.osm.pbf .
 ```
 
-Prepare the data
+Créez un graphe à partir des données d'altitude et des données OpenStreetMap.
+
+```
+$ docker run -t --rm -v $(pwd):/data osrm/osrm-backend osrm-extract -p /data/profiles/bicycle.lua /data/paris.osm.pbf
+...
+[info] [source loader] Loading from /data/paris.asc  ... 
+...
+$ docker run -t --rm -v $(pwd):/data osrm/osrm-backend osrm-partition /data/paris.osrm
+...
+[info] Edge-based-graph annotation:
+[info]   level 1 #cells 560 bit size 10
+[info]   level 2 #cells 52 bit size 6
+[info]   level 3 #cells 4 bit size 3
+[info]   level 4 #cells 1 bit size 1
+...
+$ docker run -t --rm -v $(pwd):/data osrm/osrm-backend osrm-customize /data/paris.osrm
+[info] Loaded edge based graph: 672688 edges, 153809 nodes
+...
+```
+
+Relancer le serveur avec les nouvelles données
 ---
 
 ```
-docker run -t --rm -v $(pwd):/data osrm/osrm-backend osrm-extract -p /data/profiles/bicycle.lua /data/paris.osm.pbf
-docker run -t --rm -v $(pwd):/data osrm/osrm-backend osrm-partition /data/paris.osrm
-docker run -t --rm -v $(pwd):/data osrm/osrm-backend osrm-customize /data/paris.osrm
+$ docker stop $(docker ps -q --filter ancestor=osrm/osrm-backend)
+$ docker run -d --rm -t -i -p 5000:5000 -v $(pwd):/data osrm/osrm-backend osrm-routed --algorithm mld /data/paris.osrm
 ```
 
-Run the server
----
+- Rafraîchir http://localhost:8080/ dans votre navigateur.
+- Zoomer sur Montmartre
+- Demander un itinéraire depuis Pigalle, jusqu'à la rue Custine au nord.
 
-```
-docker stop $(docker ps -q --filter ancestor=osrm/osrm-backend)
-docker run -d --rm -t -i -p 5000:5000 -v $(pwd):/data osrm/osrm-backend osrm-routed --algorithm mld /data/paris.osrm
-```
-
-Go to http://127.0.0.1:9966 and try to bike to Montmartre
+Vous devriez voir un itinéraire qui contourne Montmartre.
