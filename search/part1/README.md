@@ -18,7 +18,7 @@ DATA_DIR=~/maps-hands-on/search/installation/data
 ```
 docker-compose up -d elasticsearch
 ```
-4. Créer le schéma __ElasticSearch__
+4. Créer le schéma __ElasticSearch__ qui va contenir les points d'intéret, rues, etc.
 ```
 docker-compose run --rm schema npm run create_index
 ```
