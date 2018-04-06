@@ -100,15 +100,23 @@ $ curl 'http://localhost:5000/route/v1/driving/2.3337793350219727,48.86158097877
 }
 ```
 
-Change the frontend
+Changer le frontend
 ---
+
+Ouvrir le répertoire où se trouve les fichiers du serveur lancé à l'étape précédente.
+```
+$ cd ~/maps-hands-on/plan/part0/static
+```
+
+Ajouter ces lignes dans le fichier `index.html`.
 
 ```html
 <script src='/js/mapbox-gl-directions.js'></script>
 <link rel='stylesheet' href='/js/mapbox-gl-directions.css' type='text/css' />
 ```
 
-```js
+Egalement :
+```
 map.addControl(new MapboxDirections({
     api: "http://127.0.0.1:5000/route/v1/",
     profile: "driving",
@@ -118,4 +126,8 @@ map.addControl(new MapboxDirections({
 }), 'top-right');
 ```
 
-Open a browser and go to http://127.0.0.1:9966
+Ouvrez un navigateur à l'adresse http://localhost:8080/.
+
+Le premier clic sur la carte donne le point de départ de l'itinéraire. Le deuxième donne le point d'arrivée.
+
+Les clics suivants changent les points de départ et d'arrivée.
