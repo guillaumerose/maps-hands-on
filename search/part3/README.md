@@ -2,9 +2,9 @@
 En ajoutant un simple champ de recherche en overlay sur la carte, nous sommes en mesure d'interroger Pelias. La séquence de traitement est la suivante :
 - Interroger le serveur Pelias, qui délèguera à ElasticSearch le traitement de la requête,
 - Transformer la réponse JSon de Pelias en __marker__ sur la carte,
-- Ressérer la carte sur la zone, qui encadre l'ensemble des Pois.
+- Reserrer la carte sur la zone, qui encadre l'ensemble des POIs.
 
-A noter que le marqueurs sont cliquables afin d'en connaitre l'identité.
+A noter que les marqueurs sont cliquables afin d'en connaitre l'identité.
 
 ### Quelques tests d'abord
 1. Lancez la commande suivante pour tester le parsing des résultats
@@ -28,4 +28,4 @@ exec, clearMap, search, render et updateMap
 Inspirez vous de la méthode précédente en attachant les fonctions avec JQuery par exemple.
 ...
 ```
-Fellicications, vous avez entre les mains un champ de recherche qui repose sur la données OpenStreetMap. Si vous en avez envi, rendez-vous à la partie 4 pour voir comment le personnaliser...
+Félicications ! Vous avez entre les mains un champ de recherche qui repose sur la données OpenStreetMap. Si vous en avez envi, rendez-vous à la partie 4 pour voir comment le personnaliser...
