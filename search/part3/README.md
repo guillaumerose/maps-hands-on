@@ -7,11 +7,12 @@ En ajoutant un simple champ de recherche en overlay sur la carte, nous sommes en
 A noter que les marqueurs sont cliquables afin d'en connaitre l'identité.
 
 ### Quelques tests d'abord
-1. Lancez la commande suivante pour tester le parsing des résultats
+1. Lancez un serveur HTTP pour tester le parsing des résultats
 ```
-python -m SimpleHTTPServer 8000
+$ cd ~/maps-hands-on/search/part3
+$ python -m SimpleHTTPServer 8000
 ```
-2. Procéder à quelques reqêtes (pharmacie, rue de vaugirard)
+2. Procéder à quelques requêtes (pharmacie, rue de vaugirard)
 ```
 rue de sèvres
 rue de sevre
