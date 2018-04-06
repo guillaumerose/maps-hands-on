@@ -82,15 +82,22 @@ $ docker ps  | grep osrm
 f0b7ba501a43        osrm/osrm-backend          "osrm-routed --algor…"   28 seconds ago      Up 27 seconds       0.0.0.0:5000->5000/tcp   upbeat_newton
 ```
 
-
-
-First route
+Vérification du serveur d'itinéraire
 ---
 
 ```
-curl 'http://localhost:5000/route/v1/driving/2.3337793350219727,48.86158097877283;2.3430919647216797,48.885855610021544' | jq .
-curl 'http://localhost:5000/route/v1/driving/2.3337793350219727,48.86158097877283;2.3430919647216797,48.885855610021544?overview=full' | jq .
-curl 'http://localhost:5000/route/v1/driving/2.3337793350219727,48.86158097877283;2.3430919647216797,48.885855610021544?steps=true' | jq .
+$ curl 'http://localhost:5000/route/v1/driving/2.3337793350219727,48.86158097877283;2.3430919647216797,48.885855610021544' | jq .
+{
+...
+}
+$ curl 'http://localhost:5000/route/v1/driving/2.3337793350219727,48.86158097877283;2.3430919647216797,48.885855610021544?overview=full' | jq .
+{
+...
+}
+$ curl 'http://localhost:5000/route/v1/driving/2.3337793350219727,48.86158097877283;2.3430919647216797,48.885855610021544?steps=true' | jq .
+{
+...
+}
 ```
 
 Change the frontend
