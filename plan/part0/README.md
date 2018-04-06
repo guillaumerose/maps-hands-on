@@ -1,15 +1,15 @@
 # Reconstruire Google Maps en moins de 3 heures (Devoxx France 2018)
 
 ## Préparation des images Docker (partie 1/4)
-La création des fichiers de mbtiles est gourmande en puissance de calul et necessite une machine robuste.
-Nous allons donc partir des images mise à disposition par openmaptiles.
+La création des fichiers de mbtiles est gourmande en puissance de calcul et nécessite une machine robuste.
+Nous allons donc partir des images mises à disposition par openmaptiles.
 
-### récupération de la data
+### Récupération de la data
 1. Téléchargement
 ```
 mkdir -p ~/maps-hands-on/plan/installation/docker/data
 ```
-il faut télécharger le fichier depuis: 
+il faut télécharger le fichier depuis : 
 https://openmaptiles.com/downloads/tileset/osm/europe/france/ile-de-france/
 
 click sur "open-source or open-data project website"
@@ -21,5 +21,5 @@ wget -O ~/maps-hands-on/plan/installation/docker/data/idf.mbtiles https://openma
 
 2. Lancer l'image docker
 ```
-docker-compse up
+docker-compose up
 ```
