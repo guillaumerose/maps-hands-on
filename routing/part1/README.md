@@ -1,10 +1,10 @@
-Bicyle in Paris
+Calcul d'itinéraire à Paris
 ====
 
-Get the data
+Obtenir les données
 ----
 
-Download an extract of France
+Téléchargez un extrait des données pour l'Île-de-France.
 
 ```
 $ cd ~/maps-hands-on/plan/data
@@ -13,8 +13,7 @@ $ wget http://download.geofabrik.de/europe/france/ile-de-france-latest.osm.pbf
 Resolving download.geofabrik.de (download.geofabrik.de)... 138.201.81.20, 144.76.80.19
 ...
 ```
-
-Extract Paris
+Extrayez uniquement les données pour Paris.
 
 ```
 $ docker run -t -v $(pwd):/data guillaumerose/osmosis --read-pbf ile-de-france-latest.osm.pbf --bounding-box left=2.24 bottom=48.81 right=2.43 top=48.91 --write-pbf paris.osm.pbf
@@ -37,7 +36,7 @@ $ ls
 
 ```
 
-Prepare the data
+Préparez les données
 ---
 
 ```
@@ -73,7 +72,7 @@ $ docker run -t --rm -v $(pwd):/data osrm/osrm-backend osrm-customize /data/pari
 [info] RAM: peak bytes used: 40161280
 ```
 
-Run the server
+Lancez le serveur d'itinéraire
 ---
 
 ```
@@ -118,7 +117,7 @@ Ajouter ces lignes dans le fichier `index.html`.
 Egalement :
 ```
 map.addControl(new MapboxDirections({
-    api: "http://127.0.0.1:5000/route/v1/",
+    api: "http://127.0.0.1:5000/route/v1/", // adresse du serveur d'itinéraire
     profile: "driving",
     accessToken: null,
     geocoder: null,
