@@ -5,10 +5,6 @@ La création des fichiers `mbtiles` est gourmande en puissance de calcul et néc
 Nous allons donc partir des images mises à disposition par OpenMapTiles.org.
 
 ### Récupération de la data
-```
-$ mkdir -p ~/maps-hands-on/plan/installation/docker/data
-$ cd ~/maps-hands-on/plan/installation/docker/data
-```
 Pour télécharger le fichier :
 - se rendre sur https://openmaptiles.com/downloads/tileset/osm/europe/france/ile-de-france/
 - cliquer sur "open-source or open-data project website"
@@ -17,6 +13,9 @@ Pour télécharger le fichier :
 - exécuter la commande dans le répertoire `~/maps-hands-on/plan/installation/docker/data`
 
 ```
+$ ls ~/maps-hands-on/ # devrait afficher le contenu de ce repository
+$ mkdir -p ~/maps-hands-on/plan/installation/docker/data
+$ cd ~/maps-hands-on/plan/installation/docker/data
 $ wget -c https://openmaptiles.os.zhdk.cloud.switch.ch/v3.6.1/extracts/europe/{TOKEN}/2017-07-03_france_ile-de-france.mbtiles
 --2018-04-06 19:13:36--  https://openmaptiles.os.zhdk.cloud.switch.ch/v3.6.1/extracts/europe/{TOKEN}/2017-07-03_france_ile-de-france.mbtiles
 Resolving openmaptiles.os.zhdk.cloud.switch.ch (openmaptiles.os.zhdk.cloud.switch.ch)... 86.119.32.13, 2001:620:5ca1:1ff::ce53
@@ -34,5 +33,6 @@ $
 
 ### Lancer l'image docker
 ```
-docker-compose up
+$ cd ~/maps-hands-on/plan/part0
+$ docker-compose up
 ```
