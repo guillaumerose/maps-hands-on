@@ -77,7 +77,9 @@ Run the server
 ---
 
 ```
-docker run -d --rm -t -i -p 5000:5000 -v $(pwd):/data osrm/osrm-backend osrm-routed --algorithm mld /data/paris.osrm
+$ docker run -d --rm -t -i -p 5000:5000 -v $(pwd):/data osrm/osrm-backend osrm-routed --algorithm mld /data/paris.osrm
+$ docker ps  | grep osrm
+f0b7ba501a43        osrm/osrm-backend          "osrm-routed --algor…"   28 seconds ago      Up 27 seconds       0.0.0.0:5000->5000/tcp   upbeat_newton
 ```
 
 
