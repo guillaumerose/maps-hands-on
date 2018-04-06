@@ -19,14 +19,13 @@ rue de sevre
 pharmacie
 ...
 ```
-### Intégration dans le partie __plan__
+### Intégration dans la partie __plan__
 1. Copier/coller les fonctions suivantes dans la page HTML de plan
 ```
 exec, clearMap, search, render et updateMap
 ```
 2. Binding du champ et bouton de recherche sur la fonction exec()
-```
-Inspirez vous de la méthode précédente en attachant les fonctions avec JQuery par exemple.
-...
-```
-Félicications ! Vous avez entre les mains un champ de recherche qui repose sur la données OpenStreetMap. Si vous en avez envi, rendez-vous à la partie 4 pour voir comment le personnaliser...
+
+Inspirez-vous de la méthode précédente en attachant les fonctions avec JQuery par exemple.
+
+Félicitations ! Vous avez entre les mains un champ de recherche qui repose sur la données OpenStreetMap. Si vous en avez envi, rendez-vous à la partie 4 pour voir comment le personnaliser...
