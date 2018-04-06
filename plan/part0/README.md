@@ -47,3 +47,9 @@ tiles_1  | Starting server
 tiles_1  | Listening at http://[::]:80/
 tiles_1  | Startup complete
 ```
+
+### Ouvrir le site
+
+Ouvrez votre navigateur sur http://localhost:8080/.
+
+Notez que le champ de recherche en haut à gauche n'est pas opérationnel. Vous pouvez vous déplacer sur la carte, zoomer, etc.
