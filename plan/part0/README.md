@@ -10,12 +10,12 @@ Pour télécharger le fichier :
 - cliquer sur "open-source or open-data project website"
 - cliquer sur Free download et se créer un compte
 - copier la commande `wget` sous le bouton Free download
-- exécuter la commande dans le répertoire `~/maps-hands-on/plan/installation/docker/data`
+- exécuter la commande dans le répertoire `~/maps-hands-on/plan/data`
 
 ```
 $ ls ~/maps-hands-on/ # devrait afficher le contenu de ce repository
-$ mkdir -p ~/maps-hands-on/plan/installation/docker/data
-$ cd ~/maps-hands-on/plan/installation/docker/data
+$ mkdir -p ~/maps-hands-on/plan/data
+$ cd ~/maps-hands-on/plan/data
 $ wget -c https://openmaptiles.os.zhdk.cloud.switch.ch/v3.6.1/extracts/europe/{TOKEN}/2017-07-03_france_ile-de-france.mbtiles
 --2018-04-06 19:13:36--  https://openmaptiles.os.zhdk.cloud.switch.ch/v3.6.1/extracts/europe/{TOKEN}/2017-07-03_france_ile-de-france.mbtiles
 Resolving openmaptiles.os.zhdk.cloud.switch.ch (openmaptiles.os.zhdk.cloud.switch.ch)... 86.119.32.13, 2001:620:5ca1:1ff::ce53
