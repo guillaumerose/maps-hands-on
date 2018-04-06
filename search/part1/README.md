@@ -1,5 +1,3 @@
-# Reconstruire Google Maps en moins de 3 heures (Devoxx France 2018)
-
 ## Configuration de Pelias (partie 1/4)
 Pour fonctionner à minimum, Pelias a besoin d'allumer deux conteneurs : le conteneur ElasticSearch et le conteneur API, qui a en charge d'orchestrer les requêtes utilisateurs.
 
@@ -10,6 +8,10 @@ git clone https://github.com/pelias/dockerfiles.git ~/maps-hands-on/search/insta
 ```
 2. Faire pointer la variable __DATA_DIR__ dans le fichier __.env__ sur le répertoire de données
 ```
+$ cd ~/maps-hands-on/search/installation/pelias
+$ vi .env
+...
+$ cat .env
 DATA_DIR=~/maps-hands-on/search/installation/data
 ```
 3. Allumer le conteneur __ElasticSearch__
