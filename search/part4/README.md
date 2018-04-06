@@ -1,11 +1,9 @@
-# Reconstruire Google Maps en moins de 3 heures (Devoxx France 2018)
-
 ## Ajout de données personnalisées (partie 4/4)
-Il est bien entendu possible d'ajouter nos propres données au moteur de recherche. Pour le démontrer, nous allons intégrer les zones d'embarquements __STIF__ disponibles en OpenData. Il s'agit d'un petit bout de la donnée accessible, mais cela sera suffisant pour notre exemple.
+Il est bien entendu possible d'ajouter nos propres données au moteur de recherche. Pour le démontrer, nous allons intégrer les zones d'embarquement __STIF__ disponibles en OpenData. Il s'agit d'un petit bout de la donnée accessible, mais cela sera suffisant pour notre exemple.
 
-La source de données est disponible au format CSV à l'URL suivante :  https://opendata.stif.info/explore/dataset/zde-ref-idf/.
+La source de données est disponible au format CSV à l'URL suivante : https://opendata.stif.info/explore/dataset/zde-ref-idf/.
 
-Deux options s'offrent à vous, vous pouvez essayer de convertir la donnée STIF ou récupérer le fichier PBF généré par votre serviteur sur le support, le copier à l'endroit indiqué ci-dessous et aller directement au paragraphe __Intégration des données STIF__
+Deux options s'offrent à vous, vous pouvez essayer de convertir la donnée STIF ou récupérer le fichier PBF généré par nos soins sur le support, le copier à l'endroit indiqué ci-dessous et aller directement au paragraphe __Intégration des données STIF__
 ```
 cp DEVOXX_SUPPORT/search/data/stif/zde-ref-idf.osm.pbf ~/maps-hands-on/search/part4/zde-ref-idf.osm.pbf
 ```
