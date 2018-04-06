@@ -21,5 +21,5 @@ wget -O ~/maps-hands-on/plan/installation/docker/data/idf.mbtiles https://openma
 
 2. Lancer l'image docker
 ```
-docker run --rm -it -v ~/maps-hands-on/plan/installation/docker/data:/data -p 8080:80 klokantech/openmaptiles-server
+docker-compse up
 ```
