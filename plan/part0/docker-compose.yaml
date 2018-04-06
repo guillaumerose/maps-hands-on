@@ -13,4 +13,4 @@ services:
     ports:
       - 8081:80
     volumes:
-      - ./data:/data
+      - ../data:/data
