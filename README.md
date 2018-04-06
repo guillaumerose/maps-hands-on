@@ -1,4 +1,4 @@
-# maps-hands-on
+# Reconstruire Google Maps en moins de 3 heures (Devoxx France 2018)
 
 Cet atelier a besoin de fichiers disponibles dans ce repository.
 
