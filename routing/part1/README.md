@@ -7,7 +7,11 @@ Get the data
 Download an extract of France
 
 ```
-wget http://download.geofabrik.de/europe/france/ile-de-france-latest.osm.pbf
+$ cd ~/maps-hands-on/plan/data
+$ wget http://download.geofabrik.de/europe/france/ile-de-france-latest.osm.pbf
+--2018-04-06 19:54:40--  http://download.geofabrik.de/europe/france/ile-de-france-latest.osm.pbf
+Resolving download.geofabrik.de (download.geofabrik.de)... 138.201.81.20, 144.76.80.19
+...
 ```
 
 Extract Paris
