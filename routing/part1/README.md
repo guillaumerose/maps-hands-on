@@ -108,7 +108,7 @@ Change the frontend
 <link rel='stylesheet' href='/js/mapbox-gl-directions.css' type='text/css' />
 ```
 
-```
+```js
 map.addControl(new MapboxDirections({
     api: "http://127.0.0.1:5000/route/v1/",
     profile: "driving",

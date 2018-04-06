@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Devoxx - howto rebuild gmap in 3 hours</title>
+
+  <link rel="stylesheet" type="text/css" href="/css/mapbox-gl.css" />
+  <script src="/js/mapbox-gl.js"></script>
+  <script src="/js/jquery.js"></script>
+  <script src='/js/mapbox-gl-directions.js'></script>
+  <link rel='stylesheet' href='/js/mapbox-gl-directions.css' type='text/css' />
+  <style>
+    body { margin:0; padding:0 }
+    #map { position:absolute; top:0; bottom:0; width:100% }
+    .searchbox { position:absolute; padding-top: 12px; padding-bottom: 12px; padding-left: 12px; top:10px; left:10px; width: 400px; background-color: white }
+    input { width: 224px; height: 24px; border: hidden;}
+    *:focus { border: hidden; }
+    input:focus::-webkit-input-placeholder { opacity: 0; border: hidden; }
+  </style>
+</head>
+<body>
+  <div id='map'></div>
+  <div class="searchbox">
+    <form>
+      <input type="input" type="text" placeholder="Search Devoxx maps" name="search"/>
+    </form>
+  </div>
+  <script>
+    var map = new mapboxgl.Map({
+      container: 'map',
+      center: [2.3412, 48.8569],
+      zoom: 13,
+      style: 'http://127.0.0.1:8081/styles/osm-bright/style.json'
+    });
+    map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+    map.addControl(new MapboxDirections({
+        api: "http://127.0.0.1:5000/route/v1/",
+        profile: "driving",
+        accessToken: null,
+        geocoder: null,
+        unit: "metric",
+    }), 'top-right');
+  </script>
+</body>
+</html>
