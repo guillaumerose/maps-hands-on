@@ -45,6 +45,13 @@ $ docker run -d --rm -t -i -p 5000:5000 -v $(pwd):/data osrm/osrm-backend osrm-r
 
 - Rafraîchir http://localhost:8080/ dans votre navigateur.
 - Zoomer sur Montmartre
-- Demander un itinéraire depuis Pigalle, jusqu'à la rue Custine au nord.
+- Demander un itinéraire depuis la Place de Clichy, jusqu'à la rue Azaïs, près du parvis du Sacré Coeur.
 
-Vous devriez voir un itinéraire qui contourne Montmartre.
+Vous devriez voir un itinéraire qui passe par le nord de Montmartre.
+
+Modifier le calcul des pénalités
+---
+
+Le calcul des pénalités en fonction de la pente se trouve à la toute fin du fichier `~/maps-hands-on/routing/part2/profiles/bicycle.lua`. 
+
+Modifiez-le, re-créez le graphe des données (trois instructions `docker run` ci-dessus), puis relancer le serveur (instructions `docker stop` et `docker run` ci-dessus).
