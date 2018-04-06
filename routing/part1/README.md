@@ -43,11 +43,22 @@ curl 'http://localhost:5000/route/v1/driving/2.3337793350219727,48.8615809787728
 curl 'http://localhost:5000/route/v1/driving/2.3337793350219727,48.86158097877283;2.3430919647216797,48.885855610021544?steps=true' | jq .
 ```
 
-Start a frontend
+Change the frontend
 ---
 
+```html
+<script src='/js/mapbox-gl-directions.js'></script>
+<link rel='stylesheet' href='/js/mapbox-gl-directions.css' type='text/css' />
 ```
-docker run -d -p 9966:9966 osrm/osrm-frontend
+
+```
+map.addControl(new MapboxDirections({
+    api: "http://127.0.0.1:5000/route/v1/",
+    profile: "driving",
+    accessToken: null,
+    geocoder: null,
+    unit: "metric",
+}), 'top-right');
 ```
 
 Open a browser and go to http://127.0.0.1:9966
