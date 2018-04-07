@@ -1,5 +1,5 @@
-## Configuration de Pelias (partie 1/4)
-Pour fonctionner à minimum, Pelias a besoin d'allumer deux conteneurs : le conteneur ElasticSearch et le conteneur API, qui a en charge d'orchestrer les requêtes utilisateurs.
+## Configuration de Pelias
+Pour fonctionner a minima, Pelias a besoin d'allumer deux conteneurs : le conteneur ElasticSearch et le conteneur API, qui a en charge d'orchestrer les requêtes utilisateurs.
 
 ### Préparation des assets et lancement des services
 1. Cloner le projet Pelias Dockerfiles dans ~/maps-hands-on/search/
@@ -18,7 +18,7 @@ DATA_DIR=~/maps-hands-on/search/installation/data
 ```
 docker-compose up -d elasticsearch
 ```
-4. Créer le schéma __ElasticSearch__ qui va contenir les points d'intéret, rues, etc.
+4. Créer le schéma __ElasticSearch__ qui va contenir les points d'intérêt, rues, etc.
 ```
 docker-compose run --rm schema npm run create_index
 ```
@@ -34,4 +34,4 @@ docker-compose ps
 ```
 curl http://localhost:4000/v1/search?text=pharmacie | jq
 ```
-Cool, nous avons un serveur opérationnel mais sans données ! Rendez-vous à la partie 2...
+Cool, nous avons un serveur opérationnel mais pas encore de données ! Rendez-vous à la partie 2.

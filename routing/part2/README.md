@@ -1,12 +1,10 @@
-En vélo à Montmartre
-===
+## En vélo à Montmartre
 
 ![Altitudes de Paris](paris.png)
 
-Nous allons modifier le calcul d'itinéraire pour minimiser les montées et descentes en vélo.
+Nous allons modifier le calcul d'itinéraire pour minimiser les montées en vélo.
 
-Préparer les données
-----
+### Préparer les données
 
 Copiez les données de la première partie.
 
@@ -52,6 +50,6 @@ Vous devriez voir un itinéraire qui passe par le nord de Montmartre.
 Modifier le calcul des pénalités
 ---
 
-Le calcul des pénalités en fonction de la pente se trouve à la toute fin du fichier `~/maps-hands-on/routing/part2/profiles/bicycle.lua`. 
+Le calcul des pénalités en fonction de la pente se trouve à la toute fin du fichier `~/maps-hands-on/routing/part2/profiles/bicycle.lua`.
 
-Modifiez-le, re-créez le graphe des données (trois instructions `docker run` ci-dessus), puis relancer le serveur (instructions `docker stop` et `docker run` ci-dessus).
+Modifiez-le, re-créez le graphe des données (les trois instructions `docker run` ci-dessus), puis relancer le serveur (instructions `docker stop` et `docker run` ci-dessus).
