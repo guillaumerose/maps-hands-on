@@ -29,4 +29,4 @@ exec, clearMap, search, render et updateMap
 
 Inspirez-vous de la méthode précédente en attachant les fonctions avec JQuery par exemple.
 
-Félicitations ! Vous avez entre les mains un champ de recherche qui repose sur la données OpenStreetMap. Si vous en avez envie, rendez-vous à la partie 4 pour voir comment le personnaliser.
+Félicitations ! Vous avez entre les mains un champ de recherche qui repose sur la données OpenStreetMap. Si vous souhaitez le personnaliser, rendez-vous à la [partie 4](https://github.com/guillaumerose/maps-hands-on/tree/master/search/part4).
