@@ -1,9 +1,9 @@
 # Reconstruire Google Maps en moins de 3 heures
 
-Dans cet atelier, nous allons assembler les mêmes briques de base que possède Google Maps, y partir de solutions Open Source :
-- un plan
-- un calcul d'itinéraire
-- une fonction de recherche
+Dans cet atelier, nous allons assembler les mêmes briques de base que possède Google Maps, à partir de solutions Open Source :
+- un plan,
+- un calcul d'itinéraire,
+- une fonction de recherche.
 
 Cet atelier a besoin de certains fichiers disponibles dans ce repository.
 
