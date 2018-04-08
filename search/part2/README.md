@@ -6,15 +6,15 @@ Pelias est prêt à recevoir les données OSM/Paris.
 ```
 cp DEVOXX_SUPPORT/search/data/osm/paris.osm.pbf ~/maps-hands-on/search/installation/data/openstreetmap/
 ```
-2. Modifier la configuration de l'importer OpenStreetMap dans le fichier __pelias.json__ pour pouvoir utiliser la données Paris
-
-Remplacer la référence au fichier `portland_oregon.osm.pbf` par `paris.osm.pbf` dans le noeud "imports.openstreetmap.import.filename" (inutile de modifier le noeud "imports.openstreetmap.download.sourceURL").
-
-3. Importer les données OSM/Paris dans ElasticSearch
+2. Modifier la configuration de _l'importer_ OpenStreetMap dans le fichier __pelias.json__ pour pouvoir utiliser la données Paris
+```
+sed -i -e 's/portland_oregon.osm.pbf/paris.osm.pbf/g' pelias.json
+```
+3. Importer les données OSM/Paris dans ElasticSearch. Cette étape nécessite un minum de RAM, si vous rencontrer des erreurs pendant l'importation des données, n'hésitez pas à augmenter la mémoire allouer. Dans le cas contraire laisser _l'importer_ terminer son traitement. Ce dernier se relancera tout seul en cas d'echec.
 ```
 docker-compose run --rm openstreetmap npm start
 ```
-4. Tester la présence de POI (_Points of Interest_)
+4. Tester la présence d'un POI (_Points of Interest_)
 ```
 curl http://localhost:4000/v1/search?text=pharmacie | jq
 ```
@@ -22,4 +22,4 @@ curl http://localhost:4000/v1/search?text=pharmacie | jq
 ```
 curl http://localhost:4000/v1/search?text=rue%20lecourbe | jq
 ```
-Youpi ! Notre service de recherche est prêt à s'intégrer dans notre interface. Rendez-vous à la [partie 3](https://github.com/guillaumerose/maps-hands-on/tree/master/search/part3).
+Notre service de recherche est prêt à s'intégrer dans notre interface. Rendez-vous à la [partie 3](https://github.com/guillaumerose/maps-hands-on/tree/master/search/part3).

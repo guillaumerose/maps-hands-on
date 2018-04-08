@@ -50,8 +50,11 @@
 
         function render(bbox, features) {
             console.info('Rendering pois and map');
+
+            var confidence = document.getElementById("confidence").value / 100;
+
             var filtered = _.filter(features, function (feature) {
-                return (feature.properties.confidence >= 0.9);
+                return (feature.properties.confidence >= confidence);
             });
             _.each(filtered, function (feature) {
                 L.marker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]).bindPopup(feature.properties.name).addTo(document.poiLayer);
@@ -69,6 +72,11 @@
         $(document).ready(function () {
             $('#search').on('submit', function (e) {
                 exec($('#text').val());
+                return false;
+            });
+
+            $('#confidence').on('click', function (e) {
+                $('#search').submit();
                 return false;
             });
 
@@ -108,7 +116,8 @@
                     <div class="input-group" style="position: relative; margin: 10px;">
                         <input id="text" type="text" class="form-control" placeholder="Search for...">
                         <span class="input-group-btn">
-                            <button id="go" class="btn btn-default" type="button">Rechercher</button>
+                            <input id="confidence" type="range" min="0" max="100" value="50" class="form-control">
+                            <button id="go" type="button" class="btn btn-default">Rechercher</button>
                         </span>
                     </div>
                     <!-- /input-group -->
