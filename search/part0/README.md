@@ -9,10 +9,7 @@ $ cp DEVOXX_SUPPORT/search/docker/devoxx_search_docker_images.tar.gz ~/maps-hand
 $ cd ~/maps-hands-on/search/installation/docker
 ```
 ```
-$ gunzip devoxx_search_docker_images.tar.gz
-```
-```
-$ docker load --input devoxx_search_docker_images.tar
+$ docker load --input devoxx_search_docker_images.tar.gz
 ```
 
 Nous sommes prêts à configurer Pelias. Rendez-vous à la [partie 1](https://github.com/guillaumerose/maps-hands-on/tree/master/search/part1).
