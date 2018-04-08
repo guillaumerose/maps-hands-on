@@ -15,4 +15,4 @@ $ gunzip devoxx_search_docker_images.tar.gz
 $ docker load --input devoxx_search_docker_images.tar
 ```
 
-Nous sommes prêts à configurer Pelias. Rendez-vous à la [https://github.com/guillaumerose/maps-hands-on/tree/master/search/part1](partie 1).
+Nous sommes prêts à configurer Pelias. Rendez-vous à la [partie 1](https://github.com/guillaumerose/maps-hands-on/tree/master/search/part1).
