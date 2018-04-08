@@ -25,5 +25,4 @@ info: [openstreetmap] Creating read stream for: /data/openstreetmap/zde-ref-idf.
 ...
 ```
 5. Relancez le serveur HTTP de test de la partie 3 et cherchez les arrêts STIF. Par exemple, la requête `arrêt stif` affichera les premier arrêts rencontrés par Pelias.
-
 Il existe beaucoup de fournisseurs offrant des données riches en contenu, bien souvent vous aurez besoin de transformer cette donnée en format OSM. Il existe des outils adaptés à cela comme par exemple ___osmconvert___, qui convertit en plusieurs formats. N'hésitez pas à vous inspirer d'un outil Python, que j'ai codé pour l'occasion et qui m'a permi de convertir la donnée STIF/CSV en STIF/OSM, [disponible ici](https://github.com/ulrich/osm-stif_to_osm).
