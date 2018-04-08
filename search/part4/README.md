@@ -15,17 +15,13 @@ $ vi pelias.json
 ```
 Ajoutez une structure pour le fichier zde-ref-idf.osm.pbf dans le tableau "imports.openstreetmap.import".
 
-3. Importez les données __STIF/Zones d'Embarquement d'Île-de-France__ dans ElasticSearch
+3. Importez de nouveau les données __STIF/Zones d'Embarquement d'Île-de-France__ dans ElasticSearch
 ```
 $ docker-compose run --rm openstreetmap npm start
 ...
 info: [openstreetmap] Creating read stream for: /data/openstreetmap/zde-ref-idf.osm.pbf
 ...
 ```
-A la fin de l'exécution, relancez le serveur HTTP.
-```
-$ cd ~/maps-hands-on/search/part3
-$ python -m SimpleHTTPServer 8000
-Serving HTTP on 0.0.0.0 port 8000 ...
-```
-Cherchez à présent les arrêts STIF via requête suivante par exemple : `arrêt stif`.
+4. Relancez le serveur HTTP de test de la partie 3 et cherchez les arrêts STIF. Par exemple, la requête `arrêt stif` affichera les premier arrêts rencontrés par Pelias.
+
+Il existe beaucoup de fournisseurs offrant des données riches en contenu, bien souvent vous aurez besoin de transformer cette donnée en format OSM. Il existe des outils adaptés à cela comme par exemple ___osmconvert___, qui convertit en plusieurs formats. N'hésitez pas à vous inspirer d'un outil Python, que j'ai codé pour l'occasion et qui m'a permi de convertir la donnée STIF/CSV en STIF/OSM, [disponible ici](https://github.com/ulrich/osm-stif_to_osm).
