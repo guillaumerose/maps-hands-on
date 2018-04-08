@@ -27,7 +27,6 @@ rue de sèvres
 ```
 Utilisez le slider afin d'être plus ou moins permissif sur ranking des résultats retournés.
 Par exemple, la recherche du terme "pharmacie montparnasse" retourne beaucoup de POI, utilisez le slider pour affiner pour votre recherche.
-...
 
 ### Intégration dans la partie plan
 1. Copier/coller les fonctions suivantes dans la page HTML de plan
