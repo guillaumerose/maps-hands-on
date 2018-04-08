@@ -17,6 +17,7 @@ $ cd ~/maps-hands-on/search/installation/pelias
 $ vi pelias.json
 ```
 Ajoutez une structure pour le fichier zde-ref-idf.osm.pbf dans le tableau "imports.openstreetmap.import".
+
 4. Importez de nouveau les données __STIF/Zones d'Embarquement d'Île-de-France__ dans ElasticSearch
 ```
 $ docker-compose run --rm openstreetmap npm start
