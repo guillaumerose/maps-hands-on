@@ -28,7 +28,9 @@
             padding-bottom: 6px;
             margin: 8px;
             background-color: white;
-            width: 392px;
+            border: 1px solid #d3d3d3;
+            box-sizing: content-box;
+            display: inline-block;
         }
 
         #search {
@@ -38,13 +40,20 @@
         button {
             margin-right: 5px;
         }
+
+        .marker {
+            width: 15px;
+            height: 15px;
+            background-color: #1da1f2;
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body>
 <div id='map'></div>
 <div class="fixed-top">
     <div id="nav">
-        <form class="form-inline">
+        <form id="form-search" class="form-inline">
             <input id="search" type="input" type="text" placeholder="Rechercher dans OpenStreetMap" name="q"
                    class="form-control mb-2 mr-sm-2"/>
             <button id="go" class="btn btn-primary mb-2" type="button">
@@ -71,10 +80,29 @@
         map.addControl(new MapboxDirections({
             api: "http://127.0.0.1:5000/route/v1/", // adresse du serveur d'itinéraire
             profile: "driving",
-            accessToken: null,
-            geocoder: null,
             unit: "metric"
         }), 'top-left');
+    });
+
+    var marker = null;
+    $('#form-search').on('submit', function (e) {
+        if (marker != null) {
+            marker.remove();
+        }
+        $.getJSON('http://127.0.0.1:4000/v1/search?size=1&text=' + $('#search').val(), function (result) {
+            coord = result.features["0"].geometry.coordinates
+            var el = document.createElement('div');
+            el.className = 'marker';
+            marker = new mapboxgl.Marker(el)
+                    .setLngLat(coord)
+                    .addTo(map);
+            map.fitBounds(new mapboxgl.LngLatBounds(coord, coord), {maxZoom: 15});
+        });
+        return false
+    });
+    $('#go').on('click', function (e) {
+        $('#form-search').submit();
+        return false;
     });
 </script>
 </body>
