@@ -1,37 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Devoxx - howto rebuild gmap in 3 hours</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hands on</title>
 
-  <link rel="stylesheet" type="text/css" href="/css/mapbox-gl.css" />
-  <script src="/js/mapbox-gl.js"></script>
-  <script src="/js/jquery.js"></script>
-  <style>
-    body { margin:0; padding:0 }
-    #map { position:absolute; top:0; bottom:0; width:100% }
-    .searchbox { position:absolute; padding-top: 12px; padding-bottom: 12px; padding-left: 12px; top:10px; left:10px; width: 400px; background-color: white }
-    input { width: 224px; height: 24px; border: hidden;}
-    *:focus { border: hidden; }
-    input:focus::-webkit-input-placeholder { opacity: 0; border: hidden; }
-  </style>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/mapbox-gl.css"/>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/mapbox-gl.js"></script>
+    <script src="/js/font.js"></script>
+
+    <style>
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%
+        }
+
+        #nav {
+            padding: 12px;
+            padding-bottom: 6px;
+            margin: 8px;
+            background-color: white;
+            width: 392px;
+        }
+
+        #search {
+            width: 262px;
+        }
+
+        button {
+            margin-right: 5px;
+        }
+    </style>
 </head>
 <body>
-  <div id='map'></div>
-  <div class="searchbox">
-    <form>
-      <input type="input" type="text" placeholder="Search Devoxx maps" name="search"/>
-    </form>
-  </div>
-  <script>
+<div id='map'></div>
+<div class="fixed-top">
+    <div id="nav">
+        <form class="form-inline">
+            <input id="search" type="input" type="text" placeholder="Rechercher dans OpenStreetMap" name="q"
+                   class="form-control mb-2 mr-sm-2"/>
+            <button id="go" class="btn btn-primary mb-2" type="button">
+                <i class="fa fa-search"></i>
+            </button>
+            <button class="btn btn-primary mb-2" type="button">
+                <i class="fa fa-bicycle"></i>
+            </button>
+        </form>
+    </div>
+</div>
+<script>
     var map = new mapboxgl.Map({
-      container: 'map',
-      center: [2.3412, 48.8569],
-      zoom: 13,
-      style: 'http://127.0.0.1:8081/styles/osm-bright/style.json'
+        container: 'map',
+        center: [2.3412, 48.8569],
+        zoom: 13,
+        style: 'http://127.0.0.1:8081/styles/osm-bright/style.json'
     });
     map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
-  </script>
+</script>
 </body>
 </html>
