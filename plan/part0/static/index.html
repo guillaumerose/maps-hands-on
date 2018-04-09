@@ -1,138 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Devoxx - howto rebuild gmap in 3 hours</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Devoxx - howto rebuild gmap in 3 hours</title>
 
-    <link rel="stylesheet" type="text/css" href="/css/mapbox-gl.css"/>
-    <script src="/js/mapbox-gl.js"></script>
-    <script src="/js/jquery.js"></script>
-    <style>
-        body {
-            margin: 0;
-            padding: 0
-        }
-
-        #map {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 100%
-        }
-
-        .searchbox {
-            position: absolute;
-            padding-top: 12px;
-            padding-bottom: 12px;
-            padding-left: 12px;
-            top: 10px;
-            left: 10px;
-            width: 400px;
-            background-color: white
-        }
-
-        input {
-            width: 224px;
-            height: 24px;
-            border: hidden;
-        }
-
-        *:focus {
-            border: hidden;
-        }
-
-        input:focus::-webkit-input-placeholder {
-            opacity: 0;
-            border: hidden;
-        }
-
-        .marker {
-            display: block;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            padding: 0;
-        }
-    </style>
+  <link rel="stylesheet" type="text/css" href="/css/mapbox-gl.css" />
+  <script src="/js/mapbox-gl.js"></script>
+  <script src="/js/jquery.js"></script>
+  <style>
+    body { margin:0; padding:0 }
+    #map { position:absolute; top:0; bottom:0; width:100% }
+    .searchbox { position:absolute; padding-top: 12px; padding-bottom: 12px; padding-left: 12px; top:10px; left:10px; width: 400px; background-color: white }
+    input { width: 224px; height: 24px; border: hidden;}
+    *:focus { border: hidden; }
+    input:focus::-webkit-input-placeholder { opacity: 0; border: hidden; }
+  </style>
 </head>
 <body>
-<div id='map'></div>
-<div class="searchbox">
-    <form id="jambon">
-        <input type="input" type="text" placeholder="Search Devoxx maps" name="search" id="search"/>
-        <button id="go" class="btn btn-default" type="button">Rechercher</button>
+  <div id='map'></div>
+  <div class="searchbox">
+    <form>
+      <input type="input" type="text" placeholder="Search Devoxx maps" name="search"/>
     </form>
-</div>
-<script>
-
-    var marker
+  </div>
+  <script>
     var map = new mapboxgl.Map({
-        container: 'map',
-        center: [2.3412, 48.8569],
-        zoom: 13,
-        style: 'http://127.0.0.1:8081/styles/osm-bright/style.json'
+      container: 'map',
+      center: [2.3412, 48.8569],
+      zoom: 13,
+      style: 'http://127.0.0.1:8081/styles/osm-bright/style.json'
     });
     map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
-
-    function search(text, cb) {
-        console.info('Requesting Pelias');
-        $.ajax({
-            url: 'http://localhost:4000/v1/search',
-            method: 'GET',
-            data: {
-                text: text,
-                size: 1,
-                'boundary.circle.lat': 48.853,
-                'boundary.circle.lon': 2.35,
-                'boundary.circle.radius': 10
-            },
-            headers: {'Accept': 'application/json'}
-        }).done(cb);
-    }
-
-    function clearMap() {
-        if (marker != null) {
-            console.log(marker.remove())
-        }
-    }
-
-    function exec(text) {
-        clearMap();
-
-        search(text, function (result) {
-            result = result || [];
-            console.log(result)
-            console.log(result.features["0"].geometry.coordinates)
-            var el = document.createElement('div');
-            el.style.backgroundImage = 'url(https://placekitten.com/g/40/40/)';
-            el.style.width = '40px';
-            el.style.height = '40px';
-            el.className = 'marker';
-            marker = new mapboxgl.Marker(el)
-                    .setLngLat(result.features["0"].geometry.coordinates)
-                    .addTo(map);
-
-            var bounds = new mapboxgl.LngLatBounds();
-
-            bounds.extend(result.features["0"].geometry.coordinates);
-
-            map.fitBounds(bounds, {
-                maxZoom: 15,
-            });
-        });
-    }
-
-    $('#jambon').on('submit', function (e) {
-        exec($('#search').val());
-        return false;
-    });
-
-    $('#go').on('click', function (e) {
-        $('#jambon').submit();
-        return false;
-    });
-
-</script>
+  </script>
 </body>
 </html>
