@@ -11,3 +11,13 @@ Placez-vous dans le répertoire __search__ et listez-le. La structure se décomp
 ### Déroulement de la partie Search
 
 Les parties part0 à part3 sont les étapes minimums pour intégrer un champ de rechercher à notre carte. Si vous souhaitez personnaliser votre moteur de recherche, vous pouvez vous inspirer de la part4, qui permet l'ajout de donnée tierce comme les données du STIF (ensemble des zones d'embarquements en IDF).
+
+### Préparation du répertoire des assets
+
+Nous travaillerons dans un répertoire situé dans les sources du projet. Créer les répertoires suivant :
+```
+mkdir -p ~/maps-hands-on/search/installation/data/openstreetmap
+```
+```
+mkdir ~/maps-hands-on/search/installation/docker
+```
