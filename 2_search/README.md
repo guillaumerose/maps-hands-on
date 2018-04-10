@@ -1,7 +1,6 @@
 # Ajouter un champ de recherche
 
 Placez-vous dans le répertoire __search__ et listez-le. La structure se décompose ainsi :
-- installation : contient la configuration de Docker, de Pelias et des données OSM et STIF,
 - [part0](https://github.com/guillaumerose/maps-hands-on/tree/master/2_search/part0) : partie initialisation des services Docker,
 - [part1](https://github.com/guillaumerose/maps-hands-on/tree/master/2_search/part1) : partie initialisation des services Pelias,
 - [part2](https://github.com/guillaumerose/maps-hands-on/tree/master/2_search/part2) : partie importation des données OpenStreetMap,
