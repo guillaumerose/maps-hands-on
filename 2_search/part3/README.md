@@ -28,4 +28,4 @@ rue de sèvres
 Utilisez le slider afin d'être plus ou moins permissif sur ranking des résultats retournés.
 Par exemple, la recherche du terme "pharmacie montparnasse" retourne beaucoup de POI, utilisez le slider pour affiner pour votre recherche.
 
-Félicitations ! Vous avez entre les mains un champ de recherche qui repose sur la données OpenStreetMap. Si vous souhaitez le personnaliser, rendez-vous à la [partie 4](https://github.com/guillaumerose/maps-hands-on/tree/master/search/part4).
+Félicitations ! Vous avez entre les mains un champ de recherche qui repose sur la données OpenStreetMap. Si vous souhaitez le personnaliser, rendez-vous à la [partie bonus](https://github.com/guillaumerose/maps-hands-on/tree/master/search/bonus).
