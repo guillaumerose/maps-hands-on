@@ -1,25 +1,31 @@
-## Ajout des données dans Pelias
-Pelias est prêt à recevoir les données OSM/Paris.
+## Ajout d'un champ de recherche simple
+Avant de nous intégrer sur la carte finale, nous allons interroger notre serveur Pelias au moyen d'une simple page HTML de test.
 
-### Importation des données
-1. Copier/coller le fichier des données OSM/Paris dans le répertoire d'ElasticSearch
+La séquence de traitement est la suivante :
+- Interroger le serveur Pelias, qui délèguera à ElasticSearch le traitement de la requête,
+- Transformer la réponse JSon de Pelias en __marker__ sur la carte,
+- Reserrer la carte sur la zone, qui encadre l'ensemble des POIs.
+
+A noter que les marqueurs sont cliquables afin d'en connaitre l'identité.
+
+### Test rapide du serveur Pelias
+1. Déplacez-vous dans le répertoire de la partie 2
 ```
-cp DEVOXX_SUPPORT/search/data/osm/paris.osm.pbf ~/maps-hands-on/search/installation/data/openstreetmap/
+$ cd ~/maps-hands-on/2_search/part2
 ```
-2. Modifier la configuration de _l'importer_ OpenStreetMap dans le fichier __pelias.json__ pour pouvoir utiliser la données Paris
+2. Lancez un serveur HTTP _via_ une commande Python
 ```
-sed -i -e 's/portland_oregon.osm.pbf/paris.osm.pbf/g' pelias.json
+Pour Python 2
+$ python -m SimpleHTTPServer 8000
+
+Pour Python 3
+$ python3 -m http.server 8000
 ```
-3. Importer les données OSM/Paris dans ElasticSearch. Cette étape nécessite un minum de RAM, si vous rencontrer des erreurs pendant l'importation des données, n'hésitez pas à augmenter la mémoire allouée. Dans le cas contraire, laisser _l'importer_ terminer son traitement. Ce dernier se relancera tout seul en cas d'echec.
+3. Testez quelques requêtes
 ```
-docker-compose run --rm openstreetmap npm start
+rue de sèvres
 ```
-4. Tester la présence d'un POI (_Points of Interest_)
-```
-curl http://localhost:4000/v1/search?text=pharmacie | jq
-```
-5. Tester la présence d'une adresse
-```
-curl http://localhost:4000/v1/search?text=rue%20lecourbe | jq
-```
-Notre service de recherche est prêt à s'intégrer dans notre interface. Rendez-vous à la [partie 3](https://github.com/guillaumerose/maps-hands-on/tree/master/search/part3).
+Utilisez le slider afin d'être plus ou moins permissif sur ranking des résultats retournés.
+Par exemple, la recherche du terme "pharmacie montparnasse" retourne beaucoup de POI, utilisez le slider pour affiner pour votre recherche.
+
+Félicitations ! Vous avez entre les mains un champ de recherche qui repose sur la données OpenStreetMap. Si vous souhaitez le personnaliser, rendez-vous à la [partie bonus](https://github.com/guillaumerose/maps-hands-on/tree/master/2_search/bonus).
