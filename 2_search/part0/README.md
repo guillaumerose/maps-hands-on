@@ -48,4 +48,4 @@ docker-compose ps
 ```
 curl http://localhost:4000/v1/search?text=pharmacie | jq
 ```
-Nous avons un serveur opérationnel, mais pas encore de données ! Rendez-vous à la [partie 1](https://github.com/guillaumerose/maps-hands-on/tree/master/2_search/part1).
+Nous avons un serveur opérationnel, mais pas encore de données ! Rendez-vous à la [partie 1](../part1).

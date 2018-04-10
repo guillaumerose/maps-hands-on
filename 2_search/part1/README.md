@@ -22,4 +22,4 @@ curl http://localhost:4000/v1/search?text=pharmacie | jq
 ```
 curl http://localhost:4000/v1/search?text=rue%20lecourbe | jq
 ```
-Notre service de recherche est prêt à s'intégrer dans notre interface. Rendez-vous à la [partie 2](https://github.com/guillaumerose/maps-hands-on/tree/master/2_search/part2).
+Notre service de recherche est prêt à s'intégrer dans notre interface. Rendez-vous à la [partie 2](../part2).
