@@ -25,9 +25,7 @@ $ docker-compose run --rm openstreetmap npm start
 info: [openstreetmap] Creating read stream for: /data/openstreetmap/zde-ref-idf.osm.pbf
 ...
 ```
-5. Cherchez les arrêts STIF _via_ par exemple la requête `arrêt stif`, elle affichera les premier arrêts rencontrés par Pelias. Essayez aussi des requêtes plus ciblées comme `arret louise michel`.
-
-Si les résultats ne sont pas pertinents, ajustez le slider à la fin de la [partie 2](../part2).
+5. Cherchez des arrêts STIF comme par exemple avec la requête `arrêt bastille`, `arrêt métro créteil université`... 
 
 ### Pour intégrer d'autres données
 Il existe beaucoup de fournisseurs offrant des données riches en contenu, bien souvent vous aurez besoin de transformer cette donnée en format OSM. Il existe des outils adaptés à cela comme par exemple ___osmconvert___, qui convertit en plusieurs formats.
