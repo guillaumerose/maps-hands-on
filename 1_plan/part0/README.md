@@ -41,4 +41,4 @@ tiles_1  | Automatically creating config file for 2017-07-03_france_ile-de-franc
 ### Tester le site
 Ouvrez votre navigateur sur http://localhost:8080/
 
-Vous devriez pouvoir vous déplacer sur la carte, zoomer, etc. Notez que le champ de recherche en haut à gauche __n'est pas encore opérationnel__.
+Vous devriez pouvoir vous déplacer sur la carte, zoomer, etc...
