@@ -16,7 +16,7 @@ A noter que les marqueurs sont cliquables afin d'en connaitre l'identité.
     <i class="fa fa-search"></i>
 </button>
 ```
-2. Copier le code Javascript suivant dans la balise script en bas de page
+2. Copier le code Javascript suivant dans la balise __script__ dans le fichier [index.html](../../1_plan/part0/static/index.html)
 ```
 var marker = null;
 $('#search_button').on('click', function (e) {
@@ -36,9 +36,12 @@ $('#search_button').on('click', function (e) {
 });
 ```
 3. Testez quelques requêtes
+Il n'est pas nécessaire de redémarrer le serveur de plan, un simple CTRL+R sur la page suffit.
 ```
+tour eiffel
 rue de sèvres
 quartier république
+école maternelle lahire
 ```
 
 Félicitations ! Vous avez entre les mains un champ de recherche qui repose sur la données OpenStreetMap. Si vous souhaitez le personnaliser, rendez-vous à la [partie bonus](../bonus).
