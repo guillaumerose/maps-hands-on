@@ -1,5 +1,5 @@
 ## Ajout d'un champ de recherche simple
-Pour pouvoir interroger notre serveur Peliasn, nous allons avoir besoin d'ajouter un champ de saisie et un bouton.
+Pour pouvoir interroger notre serveur Pelias, nous allons avoir besoin d'ajouter un champ de saisie et un bouton.
 
 La séquence de traitement est la suivante :
 - Interroger la brique Pelias/API sur 127.0.0.1:4000,
