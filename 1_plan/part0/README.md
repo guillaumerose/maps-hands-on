@@ -10,11 +10,11 @@ Pour télécharger le fichier :
 - cliquer sur "open-source or open-data project website"
 - cliquer sur Free download et se créer un compte
 - copier la commande `wget` sous le bouton Free download
-- exécuter la commande dans le répertoire `~/maps-hands-on/plan/data`
+- exécuter la commande dans le répertoire `~/maps-hands-on/1_plan/data`
 
 ```
-$ mkdir -p ~/maps-hands-on/plan/data
-$ cd ~/maps-hands-on/plan/data
+$ mkdir -p ~/maps-hands-on/1_plan/data
+$ cd ~/maps-hands-on/1_plan/data
 $ wget -c https://openmaptiles.os.zhdk.cloud.switch.ch/v3.6.1/extracts/europe/{TOKEN}/2017-07-03_france_ile-de-france.mbtiles
 ...
 2017-07-03_france_ile-de-france.mbtile 100%[============================================================================>] 167.45M  16.2MB/s    in 11s     
@@ -24,7 +24,7 @@ $ wget -c https://openmaptiles.os.zhdk.cloud.switch.ch/v3.6.1/extracts/europe/{T
 
 ### Lancer l'image docker
 ```
-$ cd ~/maps-hands-on/plan/part0
+$ cd ~/maps-hands-on/1_plan/part0
 $ docker-compose up
 ...
 tiles_1  | No MBTiles specified, using 2017-07-03_france_ile-de-france.mbtiles
