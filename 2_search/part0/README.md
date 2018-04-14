@@ -3,10 +3,10 @@ La construction des images Docker de Pelias doit se faire sur une machine robust
 
 ### Importer les images Docker
 ```
-$ cp DEVOXX_SUPPORT/search/docker/devoxx_search_docker_images.tar.gz ~/maps-hands-on/search/installation/docker
+$ cp DEVOXX_SUPPORT/search/docker/devoxx_search_docker_images.tar.gz ~/maps-hands-on/2_search/installation/docker
 ```
 ```
-$ cd ~/maps-hands-on/search/installation/docker
+$ cd ~/maps-hands-on/2_search/installation/docker
 ```
 ```
 $ docker load --input devoxx_search_docker_images.tar.gz
@@ -16,17 +16,17 @@ $ docker load --input devoxx_search_docker_images.tar.gz
 Pour fonctionner a minima, Pelias a besoin d'allumer deux conteneurs : le conteneur ElasticSearch et le conteneur API, qui a en charge d'orchestrer les requêtes utilisateurs.
 
 ### Préparation des assets et lancement des services
-1. Cloner le projet Pelias Dockerfiles dans ~/maps-hands-on/search/
+1. Cloner le projet Pelias Dockerfiles dans ~/maps-hands-on/2_search/
 ```
-git clone https://github.com/pelias/dockerfiles.git ~/maps-hands-on/search/installation/pelias
+git clone https://github.com/pelias/dockerfiles.git ~/maps-hands-on/2_search/installation/pelias
 ```
 2. Déplacez-vous dans le répertoire de Pelias
 ```
-$ cd ~/maps-hands-on/search/installation/pelias
+$ cd ~/maps-hands-on/2_search/installation/pelias
 ```
 3. Faire pointer la variable __DATA_DIR__ dans le fichier __.env__ sur le répertoire de données
 ```
-$ echo DATA_DIR=~/maps-hands-on/search/installation/data > .env
+$ echo DATA_DIR=~/maps-hands-on/2_search/installation/data > .env
 ```
 4. Allumer le conteneur __ElasticSearch__
 ```
