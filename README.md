@@ -25,4 +25,4 @@ Il sera également utile d'avoir les outils suivants, ou leurs équivalents :
 - __curl__, pour appeler les serveurs installés et vérifier que cela marche
 - __jq__, pour formatter les fichiers json en ligne de commande
 
-Pour commencer l'atelier, ouvrez le répertoire [plan](plan).
+Pour commencer l'atelier, ouvrez le répertoire [plan](1_plan).
