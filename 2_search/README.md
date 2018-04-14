@@ -1,5 +1,5 @@
 # Ajouter un champ de recherche
-Placez-vous dans le répertoire __search__ et listez-le. La structure se décompose ainsi :
+Placez-vous dans ce répertoire et listez-le. La structure se décompose ainsi :
 - [part0](./part0) : initialisation des services Docker et Pelias,
 - [part1](./part1) : importation des données OpenStreetMap,
 - [part2](./part2) : intégration du champ de recherche sur la carte,
