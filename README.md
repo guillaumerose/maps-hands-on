@@ -21,7 +21,6 @@ Outils pré-requis :
 - __docker-compose__, cf. instructions d'installation [ici](https://docs.docker.com/compose/install/)
 
 Il sera également utile d'avoir les outils suivants, ou leurs équivalents :
-- __Python 2__, pour lancer un serveur HTTP
 - __curl__, pour appeler les serveurs installés et vérifier que cela marche
 - __jq__, pour formatter les fichiers json en ligne de commande
 
