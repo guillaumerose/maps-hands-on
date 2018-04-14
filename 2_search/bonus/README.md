@@ -25,7 +25,7 @@ $ docker-compose run --rm openstreetmap npm start
 info: [openstreetmap] Creating read stream for: /data/openstreetmap/zde-ref-idf.osm.pbf
 ...
 ```
-5. Relancez le serveur HTTP de test de la partie 2 et cherchez les arrêts STIF. Par exemple, la requête `arrêt stif` affichera les premier arrêts rencontrés par Pelias. Essayez aussi des requêtes plus ciblées comme `arret louise michel`.
+5. Cherchez les arrêts STIF _via_ par exemple la requête `arrêt stif`, elle affichera les premier arrêts rencontrés par Pelias. Essayez aussi des requêtes plus ciblées comme `arret louise michel`.
 
 Si les résultats ne sont pas pertinents, ajustez le slider à la fin de la [partie 2](../part2).
 
