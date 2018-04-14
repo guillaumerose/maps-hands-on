@@ -9,7 +9,7 @@ La séquence de traitement est la suivante :
 A noter que les marqueurs sont cliquables afin d'en connaitre l'identité.
 
 ### Ajout des éléments HTML et script
-1. Copier le code HTML suivant dans le FORM __form-search__ dans le fichier __1_plan/part0/static/index.html__
+1. Copier le code HTML suivant dans le FORM __form-search__ dans le fichier [index.html](../../1_plan/part0/static/index.html)
 ```
 <input id="search" type="input" type="text" placeholder="Rechercher dans OpenStreetMap" name="q" class="form-control mb-2 mr-sm-2"/>
     <button id="search_button" class="btn btn-primary mb-2" type="button">
