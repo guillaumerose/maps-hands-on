@@ -6,8 +6,6 @@ La séquence de traitement est la suivante :
 - Transformer la réponse JSon de Pelias en __marker__,
 - Reserrer la carte sur la zone, qui encadre le POI trouvé.
 
-A noter que les marqueurs sont cliquables afin d'en connaitre l'identité.
-
 ### Ajout des éléments HTML et script
 1. Copier le code HTML suivant dans le FORM __form-search__ dans le fichier [index.html](../../1_plan/part0/static/index.html)
 ```
