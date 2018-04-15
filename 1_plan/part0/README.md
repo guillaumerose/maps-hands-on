@@ -1,24 +1,18 @@
 ## Récupération de la donnée et préparation des images Docker
-La création des fichiers MBTiles (tuiles composant une carte) est gourmande en puissance de calcul et nécessite une machine robuste.
+La création des fichiers MBTiles (tuiles composant une carte) est gourmande en puissance de calcul et nécessite une machine puissante.
 Nous allons donc partir des images mises à disposition par OpenMapTiles.org.
 
 ### Récupération de la data
-Vous pouvez récupérer le fichier __mbtiles__ de l'Île-de-France sur le support USB ou via le site __openmaptiles__.
-
-1. Préparation du répertoire de données
+Si vous avez une clef usb devoxx alors tout est prêt
 ```
-$ mkdir -p ~/maps-hands-on/1_plan/data
-$ cd ~/maps-hands-on/1_plan/data
+$ ~/maps-hands-on/1_plan/part0$ ls ../data/
+2017-07-03_france_ile-de-france.mbtiles  README.md
 ```
-2. Copier le fichier mbtiles du support USB
-```
-$ cp DEVOXX_SUPPORT/plan/data/2017-07-03_france_ile-de-france.mbtiles ~/maps-hands-on/1_plan/data
-```
-2. (bis) Télécharger le fichier mbtiles de chez OpenMapTiles
+Dans le cas contraire, il faut télécharger le fichier __mbtiles__ depuis le site __openmaptiles__
 - se rendre sur https://openmaptiles.com/downloads/tileset/osm/europe/france/ile-de-france/
 - cliquer sur "open-source or open-data project website"
 - cliquer sur _Free download_ et se créer un compte
-- copiez et exécutez la commande `wget` sous le bouton Free download
+- copiez et exécutez la commande `wget` sous le bouton Free download depuis le repertoire [data](../data)
 ```
 La sortie devrait être comme suit...
 ...
