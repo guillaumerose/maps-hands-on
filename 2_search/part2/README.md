@@ -34,6 +34,9 @@ $('#search_button').on('click', function (e) {
 });
 ```
 3. Testez quelques requêtes
+
+Le serveur de plan du début de l'atelier devrait être en train de tourner, ainsi que le serveur Pelias.
+
 Il n'est pas nécessaire de redémarrer le serveur de plan, un simple CTRL+R sur la page suffit.
 ```
 tour eiffel
