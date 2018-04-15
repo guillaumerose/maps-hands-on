@@ -23,7 +23,7 @@ La sortie devrait être comme suit...
 ```
 
 ### Lancement du serveur
-3. Lancer l'image Docker
+Lancer l'image Docker
 ```
 $ cd ~/maps-hands-on/1_plan/part0
 $ docker-compose up
