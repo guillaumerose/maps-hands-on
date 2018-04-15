@@ -8,12 +8,10 @@
 
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="/css/mapbox-gl.css" type="text/css" />
-    <link rel='stylesheet' href='/css/mapbox-gl-directions.css' type='text/css' />
 
     <script src="/js/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/mapbox-gl.js"></script>
-    <script src='/js/mapbox-gl-directions.js'></script>
     <script src="/js/font.js"></script>
 
     <style>
@@ -53,32 +51,14 @@
 
 <body>
     <div id='map'></div>
-    <div class="fixed-top">
-        <div id="nav">
-            <form id="form-search" class="form-inline">
-                <button id="route" class="btn btn-primary mb-2" type="button">
-                    <i class="fa fa-bicycle"></i>
-                </button>
-            </form>
-        </div>
-    </div>
     <script>
         var map = new mapboxgl.Map({
             container: 'map',
             center: [2.3412, 48.8569],
             zoom: 13,
-            style: 'http://127.0.0.1:8081/styles/osm-bright/style.json'
+            style: 'http://127.0.0.1:8080/style.json'
         });
         map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
-
-        $("#route").on('click', function (e) {
-            $("#nav").hide();
-            map.addControl(new MapboxDirections({
-                api: "http://127.0.0.1:5000/route/v1/", // adresse du serveur d'itinéraire
-                profile: "driving",
-                unit: "metric"
-            }), 'top-left');
-        });
     </script>
 </body>
 
