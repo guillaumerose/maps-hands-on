@@ -6,9 +6,9 @@ Placez-vous dans ce répertoire. La structure se décompose ainsi :
 - data : répertoire qui contiendra la donnée idf
 
 ## Démarrage sans connexion internet
-Vous devriez trouver le fichier `tileserver-gl.tar.gz` sur la clef USB. C'est l'image Docker du serveur de plan. Chargez-le.
+Vous devriez trouver le fichier `devoxx_plan_docker_images.tar.gz` sur la clef USB. C'est l'image Docker du serveur de plan. Chargez-le.
 ```
-docker load < tileserver-gl.tar.gz
+docker load < devoxx_plan_docker_images.tar.gz
 ```
 
 ## Pour aller plus loin
