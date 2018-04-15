@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hands on</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/mapbox-gl.css" type="text/css" />
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/mapbox-gl.js"></script>
+    <script src="/js/font.js"></script>
+    <script src="/lbc.json"></script>
+
+    <style>
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%
+        }
+
+        #nav {
+            padding: 12px;
+            padding-bottom: 6px;
+            margin: 8px;
+            background-color: white;
+            border: 1px solid #d3d3d3;
+            box-sizing: content-box;
+            display: inline-block;
+        }
+
+        #search {
+            width: 262px;
+        }
+
+        button {
+            margin-right: 5px;
+        }
+
+        .marker {
+            width: 15px;
+            height: 15px;
+            background-color: #1da1f2;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='map'></div>
+    <script>
+        var map = new mapboxgl.Map({
+            container: 'map',
+            center: [2.3412, 48.8569],
+            zoom: 13,
+            style: 'http://127.0.0.1:8080/style2.json'
+        });
+        map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+
+        map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+        map.on('load', function () { map.addLayer(lbc) });
+        map.on('click', 'leboncoin', function (e) {
+          var coordinates = e.features[0].geometry.coordinates.slice();
+          var description = e.features[0].properties.description;
+        
+          while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+          }
+
+          new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+        });
+    </script>
+</body>
+
+</html>
