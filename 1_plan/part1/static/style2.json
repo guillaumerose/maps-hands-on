@@ -603,7 +603,7 @@
                   ],
                   [
                      16,
-                     "#FFdbd7"
+                     "#A8A49A"
                   ]
                ]
             },
@@ -642,7 +642,7 @@
                ]
             },
             "fill-outline-color":"#dfdbd7",
-            "fill-color":"#ffeae2",
+            "fill-color":"#DBD6C8",
             "fill-opacity":{
                "base":1,
                "stops":[
