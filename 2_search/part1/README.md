@@ -6,7 +6,7 @@ Pelias est prêt à recevoir les données OSM/Paris.
 ```
 cp DEVOXX_SUPPORT/search/data/osm/paris.osm.pbf ~/maps-hands-on/2_search/installation/data/openstreetmap/
 ```
-2. Modifier la configuration de _l'importer_ OpenStreetMap dans le fichier __pelias.json__ pour pouvoir utiliser la données Paris
+2. Modifier la configuration de _l'importer_ OpenStreetMap dans le fichier __pelias.json__ pour pouvoir utiliser la donnée Paris
 ```
 sed -i -e 's/portland_oregon.osm.pbf/paris.osm.pbf/g' pelias.json
 ```
