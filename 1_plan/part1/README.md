@@ -1,3 +1,5 @@
+## Vérification de l'ensemble
+
 ### Lancement du serveur
 Lancer l'image Docker
 ```
@@ -12,4 +14,4 @@ tiles_1  | Automatically creating config file for 2017-07-03_france_ile-de-franc
 ### Tester le site
 Ouvrez votre navigateur sur http://127.0.0.1:8080/ (_pas_ locahost)
 
-Vous devriez voir des POIs (points of interest) persos en zoomant sur Paris,  etc...
+Vous devriez voir des POIs (points of interest) persos en zoomant sur Paris, etc.
