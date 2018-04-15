@@ -1,53 +1,82 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Devoxx - howto rebuild gmap in 3 hours</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hands on</title>
 
-  <link rel="stylesheet" type="text/css" href="/css/mapbox-gl.css" />
-  <script src="/js/mapbox-gl.js"></script>
-  <script src="/js/jquery.js"></script>
-  <script src="/lbc.json"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/mapbox-gl.css" type="text/css" />
 
-  <style>
-    body { margin:0; padding:0 }
-    #map { position:absolute; top:0; bottom:0; width:100% }
-    .searchbox { position:absolute; padding-top: 12px; padding-bottom: 12px; padding-left: 12px; top:10px; left:10px; width: 400px; background-color: white }
-    input { width: 224px; height: 24px; border: hidden;}
-    *:focus { border: hidden; }
-    input:focus::-webkit-input-placeholder { opacity: 0; border: hidden; }
-  </style>
-</head>
-<body>
-  <div id='map'></div>
-  <div class="searchbox">
-    <form>
-      <input type="input" type="text" placeholder="Search Devoxx maps" name="search"/>
-    </form>
-  </div>
-  <script>
-    var map = new mapboxgl.Map({
-      container: 'map',
-      center: [2.3412, 48.8569],
-      zoom: 13,
-      style: 'http://127.0.0.1:8080/style.json'
-    });
-    map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
-    map.on('load', function () { map.addLayer(lbc) });
-    map.on('click', 'leboncoin', function (e) {
-        var coordinates = e.features[0].geometry.coordinates.slice();
-        var description = e.features[0].properties.description;
-        
-        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/mapbox-gl.js"></script>
+    <script src="/js/font.js"></script>
+    <script src="/lbc.json"></script>
+
+    <style>
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%
         }
 
-        new mapboxgl.Popup()
+        #nav {
+            padding: 12px;
+            padding-bottom: 6px;
+            margin: 8px;
+            background-color: white;
+            border: 1px solid #d3d3d3;
+            box-sizing: content-box;
+            display: inline-block;
+        }
+
+        #search {
+            width: 262px;
+        }
+
+        button {
+            margin-right: 5px;
+        }
+
+        .marker {
+            width: 15px;
+            height: 15px;
+            background-color: #1da1f2;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='map'></div>
+    <script>
+        var map = new mapboxgl.Map({
+            container: 'map',
+            center: [2.3412, 48.8569],
+            zoom: 13,
+            style: 'http://127.0.0.1:8080/style.json'
+        });
+        map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+
+        map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+        map.on('load', function () { map.addLayer(lbc) });
+        map.on('click', 'leboncoin', function (e) {
+          var coordinates = e.features[0].geometry.coordinates.slice();
+          var description = e.features[0].properties.description;
+        
+          while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+          }
+
+          new mapboxgl.Popup()
             .setLngLat(coordinates)
             .setHTML(description)
             .addTo(map);
-    });
-  </script>
+        });
+    </script>
 </body>
+
 </html>

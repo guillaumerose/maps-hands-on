@@ -6683,7 +6683,7 @@ var Inputs = function () {
 
       this.originInput = new _geocoder2.default(Object.assign({}, {
         flyTo: false,
-        placeholder: 'Choose a starting place',
+        placeholder: 'Point de départ',
         accessToken: accessToken
       }, geocoder));
 
@@ -6693,7 +6693,7 @@ var Inputs = function () {
 
       this.destinationInput = new _geocoder2.default(Object.assign({}, {
         flyTo: false,
-        placeholder: 'Choose destination',
+        placeholder: 'Point d\'arrivée',
         accessToken: accessToken
       }, geocoder));
 
