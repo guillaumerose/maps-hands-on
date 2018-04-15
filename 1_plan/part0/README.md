@@ -5,7 +5,8 @@ Nous allons donc partir des images mises à disposition par OpenMapTiles.org.
 ### Récupération de la data
 Si vous avez une clef usb devoxx alors tout est prêt
 ```
-$ ~/maps-hands-on/1_plan/part0$ ls ../data/
+$ ~/maps-hands-on/1_plan/part0
+$ ls ../data/
 2017-07-03_france_ile-de-france.mbtiles  README.md
 ```
 Dans le cas contraire, il faut télécharger le fichier __mbtiles__ depuis le site __openmaptiles__
