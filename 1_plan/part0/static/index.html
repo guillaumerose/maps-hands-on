@@ -51,6 +51,14 @@
 
 <body>
     <div id='map'></div>
+    <div class="fixed-top">
+        <div id="nav">
+            <form id="form-search" class="form-inline">
+                <!-- search/part2 here-->
+
+            </form>
+        </div>
+    </div>
     <script>
         var map = new mapboxgl.Map({
             container: 'map',
@@ -59,6 +67,9 @@
             style: 'http://127.0.0.1:8080/style.json'
         });
         map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+
+        //search/part2 here
+
     </script>
 </body>
 
