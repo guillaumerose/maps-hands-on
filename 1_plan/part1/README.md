@@ -11,6 +11,25 @@ tiles_1  | Automatically creating config file for 2017-07-03_france_ile-de-franc
 ...
 ```
 
+### Ajouter du javascript
+Copier le code Javascript suivant dans la balise script dans le fichier index.html
+```
+        map.on('load', function () { map.addLayer(lbc) });
+        map.on('click', 'leboncoin', function (e) {
+          var coordinates = e.features[0].geometry.coordinates.slice();
+          var description = e.features[0].properties.description;
+        
+          while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+          }
+
+          new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+        });
+```
+
 ### Tester le site
 Ouvrez votre navigateur sur http://127.0.0.1:8080/ (_pas_ locahost)
 
