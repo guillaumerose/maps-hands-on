@@ -41,7 +41,7 @@ $ docker stop $(docker ps -q --filter ancestor=osrm/osrm-backend)
 $ docker run -d --rm -t -i -p 5000:5000 -v $(pwd):/data osrm/osrm-backend osrm-routed --algorithm mld /data/paris.osrm
 ```
 
-- Rafraîchir http://localhost:8080/ dans votre navigateur.
+- Rafraîchir http://127.0.0.1:8080/ (attention, ne _pas_ utiliser localhost)
 - Zoomer sur Montmartre
 - Demander un itinéraire depuis la Place de Clichy, jusqu'à la rue Azaïs, près du parvis du Sacré Coeur.
 

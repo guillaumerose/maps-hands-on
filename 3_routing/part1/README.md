@@ -129,7 +129,7 @@ map.addControl(new MapboxDirections({
 }), 'top-right');
 ```
 
-Ouvrez un navigateur à l'adresse http://localhost:8080/.
+Ouvrez un navigateur à l'adresse http://127.0.0.1:8080/ (attention, ne _pas_ utiliser localhost).
 
 Le premier clic sur la carte donne le point de départ de l'itinéraire. Le deuxième donne le point d'arrivée.
 
