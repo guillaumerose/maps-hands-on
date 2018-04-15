@@ -9,7 +9,7 @@ tiles_1  | Automatically creating config file for 2017-07-03_france_ile-de-franc
 ...
 ```
 
-### Une carte pour tous, tous sa propre carte!!
+### Une carte pour tous, tous sa propre carte !
 Ouvrez votre navigateur sur http://127.0.0.1:8080/
 
 Vous pouvez éditer le fichier style.json, modifier les valeurs et rafraîchir votre navigateur afin d'avoir votre propre thème graphique.
