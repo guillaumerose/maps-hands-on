@@ -1,0 +1,72 @@
+lbc = {
+   "id":"leboncoin",
+   "type":"symbol",
+   "minzoom":16,
+   "source":{
+      "type":"geojson",
+      "data":{
+         "type":"FeatureCollection",
+         "features":[
+            {
+               "type":"Feature",
+               "properties":{
+                  "name":"leboncoin",
+                  "description":"<strong>Groupe leboncoin</strong><p><a href=\"https://corporate.leboncoin.fr/\" target=\"_blank\" title=\"Site corporate leboncoin\">Le Bon Coin est un site web</a> d’annonces commerciales <br>sur lequel le dépôt et la lecture d’une annonce sont gratuits.</p>",
+                  "icon":"star"
+               },
+               "geometry":{
+                  "type":"Point",
+                  "coordinates":[
+                     2.357621490955353,
+                     48.87288884764152
+                  ]
+               }
+            },
+            {
+               "type":"Feature",
+               "properties":{
+                  "name":"kudoz",
+                  "description":"<strong>kudoz</strong><p><a href=\"https://www.getkudoz.com//\" target=\"_blank\" title=\"kudoz\">Kudoz</a> Offres d'emploi, jobs et stages pour les cadres.</p>",
+                  "icon":"star"
+               },
+               "geometry":{
+                  "type":"Point",
+                  "coordinates":[
+                     2.3573291301727295,
+                     48.872954122037264
+                  ]
+               }
+            },
+            {
+               "type": "Feature",
+               "properties": {
+                  "name":"A Vendre A Louer",
+                  "description":"<strong>A Vendre A Louer</strong><p><a href=\"https://www.avendrealouer.fr///\" target=\"_blank\" title=\"avendrealouer\">avendrealouer</a> est un site de petites annonces immobilières.</p>",
+                  "icon":"star"
+               },
+               "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                     2.3600220680236816,
+                     48.8727459493427
+                  ]
+            }
+         }]
+      }
+   },
+   "layout":{
+      "text-padding":2,
+      "text-font":[
+         "Open Sans Semibold"
+      ],
+      "text-anchor":"top",
+      "icon-image":"{icon}_11",
+      "text-field":"{name}",
+      "text-size":12,
+      "text-max-width":9
+   },
+   "paint":{
+      "text-color":"#FF8C00",
+      "text-halo-color":"#f00"
+   }
+}

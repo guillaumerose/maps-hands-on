@@ -1,0 +1,16 @@
+version: "3.2"
+
+services:
+  web:
+    build: .
+    ports:
+      - 8080:80
+    volumes:
+      - ./static/:/usr/share/nginx/html/
+
+  tiles:
+    image: klokantech/tileserver-gl
+    ports:
+      - 8081:80
+    volumes:
+      - ../data:/data
