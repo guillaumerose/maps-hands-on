@@ -1,5 +1,5 @@
 ### Lancement du serveur
-1. Lancer l'image Docker
+Lancer l'image Docker
 ```
 $ cd ~/maps-hands-on/1_plan/part1
 $ docker-compose up
