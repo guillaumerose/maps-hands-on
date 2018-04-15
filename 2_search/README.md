@@ -11,8 +11,6 @@ Les parties part0 à part2 sont les étapes minimums pour intégrer un champ de 
 ### Préparation du répertoire des assets
 Nous travaillerons dans un répertoire situé dans les sources du projet. Créer les répertoires suivant :
 ```
-mkdir -p ~/maps-hands-on/2_search/installation/data/openstreetmap
-```
-```
-mkdir ~/maps-hands-on/2_search/installation/docker
+$ mkdir -p ~/maps-hands-on/2_search/installation/data/openstreetmap
+$ mkdir -p ~/maps-hands-on/2_search/installation/docker
 ```
