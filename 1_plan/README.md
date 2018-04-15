@@ -3,11 +3,10 @@ Placez-vous dans ce répertoire. La structure se décompose ainsi :
 - [part0](./part0) : initialisation du serveur de plan
 - [part1](./part1) : vérification
 - [part2](./part2) : personnalisation
-- tileserver-gl.tar.gz : serveur de plan
 - data : répertoire qui contiendra la donnée idf
 
 ## Démarrage sans connexion internet
-Vous pouvez charger le serveur de plan directement depuis le fichier tileserver-gl.tar.gz
+Vous devriez trouver le fichier `tileserver-gl.tar.gz` sur la clef USB. C'est l'image Docker du serveur de plan. Chargez-le.
 ```
 docker load < tileserver-gl.tar.gz
 ```
