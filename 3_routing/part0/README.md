@@ -1,6 +1,6 @@
 ## Setup Docker
 
-Les images Docker sont disponibles sur __DEVOXX_SUPPORT__, mais si vous préférez les construire vous-même, vous pouvez les récupérer à avec commandes Docker suivantes.
+Les images Docker sont disponibles sur __DEVOXX_SUPPORT__, mais si vous préférez les construire vous-même, vous pouvez les récupérer avec les commandes Docker suivantes.
 
 ### Importer les images Docker
 ```
