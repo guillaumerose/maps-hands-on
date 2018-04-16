@@ -2,8 +2,9 @@
 
 ### Lancement du serveur
 Lancer l'image Docker
-```
+```shell
 $ cd ~/maps-hands-on/1_plan/part1
+
 $ docker-compose up
 ...
 tiles_1  | No MBTiles specified, using 2017-07-03_france_ile-de-france.mbtiles
@@ -13,7 +14,7 @@ tiles_1  | Automatically creating config file for 2017-07-03_france_ile-de-franc
 
 ### Ajouter du javascript
 Copier le code Javascript suivant dans la balise script dans le fichier index.html
-```
+```js
         map.on('load', function () { map.addLayer(lbc) });
         map.on('click', 'leboncoin', function (e) {
           var coordinates = e.features[0].geometry.coordinates.slice();

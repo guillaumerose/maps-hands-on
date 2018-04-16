@@ -4,8 +4,9 @@ Nous allons donc partir des images mises à disposition par OpenMapTiles.org.
 
 ### Récupération de la data
 Si vous avez une clef usb devoxx alors tout est prêt
-```
+```shell
 $ cd ~/maps-hands-on/1_plan/part0
+
 $ ls ../data/
 2017-07-03_france_ile-de-france.mbtiles  README.md
 ```
@@ -24,8 +25,9 @@ La sortie devrait être comme suit...
 
 ### Lancement du serveur
 Lancer l'image Docker
-```
+```shell
 $ cd ~/maps-hands-on/1_plan/part0
+
 $ docker-compose up
 ...
 tiles_1  | No MBTiles specified, using 2017-07-03_france_ile-de-france.mbtiles

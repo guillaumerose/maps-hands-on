@@ -5,21 +5,21 @@ Nous l'avons convertie au format PBF, mais il est possible de la reconstruire à
 
 ### Intégration des données STIF
 1. Copier/coller les données STIF dans le répertoire d'ElasticSearch
-```
+```shell
 $ cp DEVOXX_SUPPORT/search/data/stif/zde-ref-idf.osm.pbf ~/maps-hands-on/2_search/installation/data/openstreetmap/
 ```
 2. Déplacez-vous dans le répertoire Pelias
-```
+```shell
 $ cd ~/maps-hands-on/2_search/installation/pelias
 ```
 3. Modifiez la configuration OpenStreetMap dans le fichier __pelias.json__, afin d'y ajouter le fichier zde-ref-idf.osm.pbf
-```
+```shell
 $ vi pelias.json
 ```
 Ajoutez une structure pour le fichier zde-ref-idf.osm.pbf dans le tableau "imports.openstreetmap.import".
 
 4. Importez de nouveau les données __STIF/Zones d'Embarquement d'Île-de-France__ dans ElasticSearch
-```
+```shell
 $ docker-compose run --rm openstreetmap npm start
 ...
 info: [openstreetmap] Creating read stream for: /data/openstreetmap/zde-ref-idf.osm.pbf
