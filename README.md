@@ -9,7 +9,7 @@ Cet atelier a besoin de certains fichiers disponibles dans ce repository.
 
 Vous pouvez le cloner à partir de Github, ou, de préférence, copier les fichiers fournis sur une clef USB.
 
-Les instructions supposent que le repository est disponible dans le répertoire `~/maps-hands-on`.
+Les instructions supposent que le repository du hand-on est disponible dans le répertoire `~/maps-hands-on` et que les fichiers de données et images Docker pré-construites ont été décompressés dans `~/DEVOXX_SUPPORT`.
 
 ```
 $ cd ~
