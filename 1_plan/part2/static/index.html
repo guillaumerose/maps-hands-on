@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hands on</title>
 
+    <!-- 3_routing/part1 -->
+
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="/css/mapbox-gl.css" type="text/css" />
 
@@ -56,7 +58,7 @@
     <div class="fixed-top">
         <div id="nav">
             <form id="form-search" class="form-inline">
-                <!-- search/part2 here-->
+                <!-- 2_search/part2 here-->
             </form>
         </div>
     </div>
@@ -72,18 +74,24 @@
         map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
         map.on('load', function () { map.addLayer(lbc) });
         map.on('click', 'leboncoin', function (e) {
-          var coordinates = e.features[0].geometry.coordinates.slice();
-          var description = e.features[0].properties.description;
-        
-          while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-          }
+            var coordinates = e.features[0].geometry.coordinates.slice();
+            var description = e.features[0].properties.description;
 
-          new mapboxgl.Popup()
-            .setLngLat(coordinates)
-            .setHTML(description)
-            .addTo(map);
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
+
+            new mapboxgl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(description)
+                .addTo(map);
         });
+
+        // 1_plan/part1 here
+
+        // 2_search/part2 here
+
+        // 3_routing/part1 here
     </script>
 </body>
 
