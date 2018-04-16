@@ -6,9 +6,9 @@ Vous pouvez récupérez les données __Île-de-France__ sur DEVOXX_SUPPORT ou _v
 
 Tout d'abord, il faut créer le répertoire de données.
 ```shell
-$ mkdir -p ~/maps-hands-on/route/data
+$ mkdir -p ~/maps-hands-on/3_routing/data
 
-$ cd ~/maps-hands-on/route/data
+$ cd ~/maps-hands-on/3_routing/data
 ```
 
 Téléchargez les données l'Île-de-France.
