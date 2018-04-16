@@ -23,9 +23,13 @@ Ajoutez une structure pour le fichier zde-ref-idf.osm.pbf dans le tableau "impor
 $ docker-compose run --rm openstreetmap npm start
 ...
 info: [openstreetmap] Creating read stream for: /data/openstreetmap/zde-ref-idf.osm.pbf
+info: [dbclient]  paused=false, transient=2, current_length=147, indexed=187500, batch_ok=375, batch_retries=0, failed_records=0, venue=75390, address=112110, persec=2950
+info: [dbclient]  paused=false, transient=0, current_length=0, indexed=202801, batch_ok=406, batch_retries=0, failed_records=0, venue=90691, address=112110, persec=1530.1
+info: [dbclient]  paused=false, transient=0, current_length=0, indexed=202801, batch_ok=406, batch_retries=0, failed_records=0, venue=90691, address=112110, persec=1530.1
 ...
 ```
 5. Cherchez des arrêts STIF comme par exemple avec la requête `arrêt bastille`, `arrêt métro créteil université`... 
+A noter que dans le flux STIF d'origine, il n'y a pas de préfixe "arrêt", nous les avons ajouté pour faciliter la recherche d'éléments STIF.
 
 ### Pour intégrer d'autres données
 Il existe beaucoup de fournisseurs offrant des données riches en contenu, bien souvent vous aurez besoin de transformer cette donnée en format OSM. Il existe des outils adaptés à cela comme par exemple ___osmconvert___, qui convertit en plusieurs formats.

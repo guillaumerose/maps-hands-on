@@ -10,7 +10,7 @@ cp DEVOXX_SUPPORT/search/data/osm/paris.osm.pbf ~/maps-hands-on/2_search/install
 ```
 sed -i -e 's/portland_oregon.osm.pbf/paris.osm.pbf/g' pelias.json
 ```
-3. Importer les données OSM/Paris dans ElasticSearch
+3. Importer les données OSM/Paris dans ElasticSearch.
 Cette étape nécessite un minimum de RAM, si vous rencontrez des erreurs pendant l'importation des données, n'hésitez pas à augmenter la mémoire allouée. Dans le cas contraire, laisser _l'importer_ terminer son traitement. Ce dernier relancera un traitement tout seul en cas d'echec.
 ```
 docker-compose run --rm openstreetmap npm start
