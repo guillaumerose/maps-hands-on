@@ -9,6 +9,7 @@ Placez-vous dans ce répertoire. La structure se décompose ainsi :
 Vous devriez trouver le fichier `devoxx_plan_docker_images.tar.gz` sur la clef USB. C'est l'image Docker du serveur de plan. Chargez-le.
 ```
 $ cd ~/DEVOXX_SUPPORT/plan/docker
+
 $ docker load < devoxx_plan_docker_images.tar.gz
 ```
 

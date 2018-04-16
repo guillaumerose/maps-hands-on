@@ -9,8 +9,7 @@ Placez-vous dans ce répertoire et listez-le. La structure se décompose ainsi :
 Les parties part0 à part2 sont les étapes minimums pour intégrer un champ de rechercher à notre carte. Si vous souhaitez personnaliser votre moteur de recherche, vous pouvez vous inspirer de la partie bonus, qui permet l'ajout de donnée tierce comme les données du STIF (ensemble des zones d'embarquements en IDF).
 
 ### Préparation du répertoire des assets
-Nous travaillerons dans un répertoire situé dans les sources du projet. Créer les répertoires suivant :
+Nous travaillerons dans des répertoires situés dans les sources de la partie plan. Créer le répertoire suivant pour préparer la donnée :
 ```
 $ mkdir -p ~/maps-hands-on/2_search/installation/data/openstreetmap
-$ mkdir -p ~/maps-hands-on/2_search/installation/docker
 ```
