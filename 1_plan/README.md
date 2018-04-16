@@ -8,7 +8,8 @@ Placez-vous dans ce répertoire. La structure se décompose ainsi :
 ## Démarrage sans connexion internet
 Vous devriez trouver le fichier `devoxx_plan_docker_images.tar.gz` sur la clef USB. C'est l'image Docker du serveur de plan. Chargez-le.
 ```
-docker load < devoxx_plan_docker_images.tar.gz
+$ cd ~/DEVOXX_SUPPORT/plan/docker
+$ docker load < devoxx_plan_docker_images.tar.gz
 ```
 
 ## Pour aller plus loin
