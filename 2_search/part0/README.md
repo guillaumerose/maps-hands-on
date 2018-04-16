@@ -44,8 +44,14 @@ docker-compose run --rm schema npm run create_index
 docker-compose up -d api
 ```
 7. Faire un état des lieux des conteneurs en cours
+Vous devriez voir les conteneurs suivants après la commande suivante :
 ```
-docker-compose ps
+$ docker-compose ps
+           Name                         Command               State                        Ports                     
+---------------------------------------------------------------------------------------------------------------------
+pelias_api                   npm start                        Up       3100/tcp, 0.0.0.0:4000->4000/tcp              
+pelias_elasticsearch         /docker-entrypoint.sh elas ...   Up       0.0.0.0:9200->9200/tcp, 0.0.0.0:9300->9300/tcp
+pelias_libpostal_baseimage   /bin/bash                        Exit 0                                                 
 ```
 8. Tester la présence de Pelias
 ```
