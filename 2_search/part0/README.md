@@ -10,12 +10,18 @@ $ docker load --input devoxx_search_docker_images.tar.gz
 ```
 
 ## Configuration de Pelias
-Pour fonctionner a minima, Pelias a besoin d'allumer deux conteneurs : le conteneur ElasticSearch et le conteneur API, qui a en charge d'orchestrer les requêtes utilisateurs.
+Pour fonctionner a minima, Pelias a besoin d'allumer deux conteneurs : le conteneur __ElasticSearch__ et le conteneur __API__, qui a en charge d'orchestrer les requêtes utilisateurs.
 
 ### Préparation des assets et lancement des services
+Nous allons travailler dans le repository Pelias. Vous pouvez cloner le projet de Github comme indiqué dans le point 1 ou récupérer de DEVOXX_SUPPORT les sources (en cas de problème réseau) comme indiqué dans le point 1 BIS.
+
 1. Cloner le projet Pelias Dockerfiles dans ~/maps-hands-on/2_search/installation/pelias
 ```
-git clone https://github.com/pelias/dockerfiles.git ~/maps-hands-on/2_search/installation/pelias
+$ git clone https://github.com/pelias/dockerfiles.git ~/maps-hands-on/2_search/installation/pelias
+```
+1. (BIS) Copier/coller le projet Pelias Dockerfiles de DEVOXX_SUPPORT
+```
+$ cp -R ~/DEVOXX_SUPPORT/search/pelias/ ~/maps-hands-on/2_search/installation/
 ```
 2. Déplacez-vous dans le répertoire de Pelias
 ```
