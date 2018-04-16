@@ -6,7 +6,7 @@ Nous l'avons convertie au format PBF, mais il est possible de la reconstruire à
 ### Intégration des données STIF
 1. Copier/coller les données STIF dans le répertoire d'ElasticSearch
 ```shell
-$ cp DEVOXX_SUPPORT/search/data/stif/zde-ref-idf.osm.pbf ~/maps-hands-on/2_search/installation/data/openstreetmap/
+$ cp ~/DEVOXX_SUPPORT/search/data/stif/zde-ref-idf.osm.pbf ~/maps-hands-on/2_search/installation/data/openstreetmap/
 ```
 2. Déplacez-vous dans le répertoire Pelias
 ```shell

@@ -4,7 +4,7 @@ Pelias est prêt à recevoir les données OSM/Paris.
 ### Importation des données
 1. Copier/coller le fichier des données OSM/Paris dans le répertoire d'ElasticSearch
 ```shell
-cp DEVOXX_SUPPORT/search/data/osm/paris.osm.pbf ~/maps-hands-on/2_search/installation/data/openstreetmap/
+cp ~/DEVOXX_SUPPORT/search/data/osm/paris.osm.pbf ~/maps-hands-on/2_search/installation/data/openstreetmap/
 ```
 2. Modifier la configuration de _l'importer_ OpenStreetMap dans le fichier __pelias.json__ pour pouvoir utiliser la donnée Paris
 ```shell
