@@ -3,23 +3,24 @@ La création des fichiers MBTiles (tuiles composant une carte) est gourmande en 
 Nous allons donc partir des images mises à disposition par OpenMapTiles.org.
 
 ### Récupération de la data
-Si vous avez une clef usb devoxx alors tout est prêt
+Placez-vous dans le répertoire de données et choisissez de prendre le fichier __mbtiles__ de DEVOXX_SUPPORT ou du site OpenMapTiles.
 ```shell
-$ cd ~/maps-hands-on/1_plan/part0
-
-$ ls ../data/
-2017-07-03_france_ile-de-france.mbtiles  README.md
+$ cd ~/maps-hands-on/1_plan/data
 ```
-Dans le cas contraire, il faut télécharger le fichier __mbtiles__ depuis le site __openmaptiles__
+Copier/coller le fichier mbtiles de DEVOXX_SUPPORT (solution 1)
+```shell
+cp ~/DEVOXX_SUPPORT/plan/data/2017-07-03_france_ile-de-france.mbtiles .
+```
+Télécharger le fichier __mbtiles__ depuis le site __openmaptiles__ (solution 2)
+```shell
 - se rendre sur https://openmaptiles.com/downloads/tileset/osm/europe/france/ile-de-france/
 - cliquer sur "open-source or open-data project website"
 - cliquer sur _Free download_ et se créer un compte
-- copiez et exécutez la commande `wget` sous le bouton Free download depuis le repertoire [data](../data)
-```
+- copiez et exécutez la commande `wget` sous le bouton Free download
+
 La sortie devrait être comme suit...
 ...
 2017-07-03_france_ile-de-france.mbtile 100%[============================================================================>] 167.45M  16.2MB/s    in 11s     
-
 2018-04-06 19:13:47 (15.8 MB/s) - ‘2017-07-03_france_ile-de-france.mbtiles’ saved [175587328/175587328]
 ```
 
