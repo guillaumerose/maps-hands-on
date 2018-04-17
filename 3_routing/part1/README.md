@@ -11,7 +11,7 @@ $ mkdir -p ~/maps-hands-on/3_routing/data
 $ cd ~/maps-hands-on/3_routing/data
 ```
 
-Téléchargez les données l'Île-de-France.
+Téléchargez les données l'Île-de-France (solution 1).
 ```shell
 $ wget http://download.geofabrik.de/europe/france/ile-de-france-latest.osm.pbf
 --2018-04-06 19:54:40--  http://download.geofabrik.de/europe/france/ile-de-france-latest.osm.pbf
@@ -19,7 +19,7 @@ Resolving download.geofabrik.de (download.geofabrik.de)... 138.201.81.20, 144.76
 ...
 ```
 
-Copier/coller les données l'Île-de-France.
+Copier/coller les données l'Île-de-France (solution 2).
 ```
 cp ~/DEVOXX_SUPPORT/route/data/ile-de-france-latest.osm.pbf ~/maps-hands-on/3_routing/data
 ```
@@ -34,7 +34,7 @@ Apr 06, 2018 5:56:14 PM org.openstreetmap.osmosis.core.Osmosis run
 INFO: Total execution time: 25897 milliseconds.
 
 $ ls
-2017-07-03_france_ile-de-france.mbtiles  ile-de-france-latest.osm.pbf  paris.osm.pbf
+ile-de-france-latest.osm.pbf  paris.osm.pbf
 ```
 
 ### Préparer les données de routage
@@ -120,7 +120,7 @@ Changer le frontend
 
 Modifier le fichier `index.html` du serveur __plan__ déjà lancé
 ```shell
-$ cd ~/maps-hands-on/plan/part0/static
+$ cd ~/maps-hands-on/1_plan/partX/static
 
 $ vi index.html
 ```
@@ -131,7 +131,6 @@ Y ajouter les instructions suivantes.
 <script src='/js/mapbox-gl-directions.js'></script>
 <link rel='stylesheet' href='/js/mapbox-gl-directions.css' type='text/css' />
 ```
-
 ```js
 map.addControl(new MapboxDirections({
     api: "http://127.0.0.1:5000/route/v1/", // adresse du serveur d'itinéraire
