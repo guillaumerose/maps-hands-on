@@ -18,7 +18,7 @@ $ git clone https://github.com/guillaumerose/maps-hands-on.git
 
 Outils pré-requis :
 - __docker__
-- __docker-compose__, cf. instructions d'installation [ici](https://docs.docker.com/compose/install/)
+- __docker-compose__, (version 1.20 minimum) cf. instructions d'installation [ici](https://docs.docker.com/compose/install/)
 
 Il sera également utile d'avoir les outils suivants, ou leurs équivalents :
 - __curl__, pour appeler les serveurs installés et vérifier que cela marche
