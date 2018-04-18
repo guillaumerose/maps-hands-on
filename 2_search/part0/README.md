@@ -2,7 +2,7 @@
 La construction des images Docker de Pelias doit se faire sur une machine robuste. Ainsi, deux solutions s'offrent à vous : utilisez les images Docker fournies pour le hands-on et les importer sur votre machine (conseillé) ou si vous le souhaitez, construisez vous-même les images ([Pelias how to guide](https://pelias.io/install.html)).
 
 ### Importer les images Docker
-Cette opération peut prendre du temps selon votre configuration. En effet, les images restaurées contiennent de la données nécessaires à Pelias ([libpostal](https://github.com/openvenues/libpostal))
+Cette opération peut prendre du temps selon votre configuration (2-4 minutes). En effet, les images restaurées contiennent de la donnée importante pour Pelias, dont [libpostal](https://github.com/openvenues/libpostal), qui représente à elle seule 80% de l'espace occupé.
 ```shell
 $ cd ~/DEVOXX_SUPPORT/search/docker
 

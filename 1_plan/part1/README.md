@@ -34,4 +34,4 @@ Copier le code Javascript suivant dans la balise script dans le fichier index.ht
 ### Tester le site
 Ouvrez votre navigateur sur http://127.0.0.1:8080/ (_pas_ locahost)
 
-Vous devriez voir des POIs (points of interest) persos en zoomant sur Paris, etc.
+Vous devriez voir des POIs (points of interest) persos en zoomant sur Paris... de préférence à proximité du 85 rue du Faubourg St Martin (entre la Gare de l'Est et le Boulevard Saint-Denis). La description des POIs se trouve dans le fichier `lbc.json`.
