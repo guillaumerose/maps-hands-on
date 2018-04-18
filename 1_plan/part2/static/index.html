@@ -71,7 +71,6 @@
         });
         map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
 
-        map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
         map.on('load', function () { map.addLayer(lbc) });
         map.on('click', 'leboncoin', function (e) {
             var coordinates = e.features[0].geometry.coordinates.slice();
