@@ -5,9 +5,9 @@ Dans cet atelier, nous allons assembler les mêmes briques de base que possède 
 - un calcul d'itinéraire,
 - une fonction de recherche.
 
-Cet atelier a besoin de certains fichiers disponibles dans ce repository.
+Cet atelier a besoin de certains fichiers disponibles dans ce repository et des images pré-construites disponibles en téléchargement : [DEVOXX_SUPPORT](https://drive.google.com/file/d/1gSWROd8-mElJ8OgP61UwHPeawdsp8Vhn/view?usp=sharing)
 
-Vous pouvez le cloner à partir de Github, ou, de préférence, copier les fichiers fournis sur une clef USB.
+Vous pouvez clôner de projet.
 
 Les instructions supposent que le repository du hand-on est disponible dans le répertoire `~/maps-hands-on` et que les fichiers de données et images Docker pré-construites ont été décompressés dans `~/DEVOXX_SUPPORT`.
 
