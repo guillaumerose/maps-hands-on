@@ -26,7 +26,10 @@ cp ~/DEVOXX_SUPPORT/route/data/ile-de-france-latest.osm.pbf ~/maps-hands-on/3_ro
 
 Extrayez-en uniquement les données pour Paris
 ```shell
-$ docker run -t -v $(pwd):/data guillaumerose/osmosis --read-pbf ile-de-france-latest.osm.pbf --bounding-box left=2.24 bottom=48.81 right=2.43 top=48.91 --write-pbf paris.osm.pbf
+$ docker run -t -v $(pwd):/data guillaumerose/osmosis \
+	--read-pbf ile-de-france-latest.osm.pbf \
+	--bounding-box left=2.24 bottom=48.81 right=2.43 top=48.91 \
+	--write-pbf paris.osm.pbf
 ...
 Apr 06, 2018 5:56:14 PM org.openstreetmap.osmosis.core.Osmosis run
 INFO: Pipeline complete.
@@ -39,7 +42,8 @@ ile-de-france-latest.osm.pbf  paris.osm.pbf
 
 ### Préparer les données de routage
 ```shell
-$ docker run -t --rm -v $(pwd):/data osrm/osrm-backend osrm-extract -p /opt/bicycle.lua /data/paris.osm.pbf
+$ docker run -t --rm -v $(pwd):/data osrm/osrm-backend osrm-extract \
+  -p /opt/bicycle.lua /data/paris.osm.pbf
 ...
 [info] Expansion: 25300 nodes/sec and 23471 edges/sec
 [info] To prepare the data for routing, run: ./osrm-contract "/data/paris.osrm"
@@ -61,7 +65,8 @@ $ docker run -t --rm -v $(pwd):/data osrm/osrm-backend osrm-customize /data/pari
 
 ### Lancer le serveur d'itinéraire
 ```shell
-$ docker run -d --rm -t -i -p 5000:5000 -v $(pwd):/data osrm/osrm-backend osrm-routed --algorithm mld /data/paris.osrm
+$ docker run -d --rm -t -i -p 5000:5000 -v $(pwd):/data osrm/osrm-backend osrm-routed \
+  --algorithm mld /data/paris.osrm
 
 $ docker ps  | grep osrm
 f0b7ba501a43        osrm/osrm-backend          "osrm-routed --algor…"   28 seconds ago      Up 27 seconds       0.0.0.0:5000->5000/tcp   upbeat_newton
