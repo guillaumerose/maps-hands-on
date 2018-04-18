@@ -129,7 +129,7 @@ Y ajouter les instructions suivantes.
 
 ```html
 <script src='/js/mapbox-gl-directions.js'></script>
-<link rel='stylesheet' href='/js/mapbox-gl-directions.css' type='text/css' />
+<link rel='stylesheet' href='/css/mapbox-gl-directions.css' type='text/css' />
 ```
 ```js
 map.addControl(new MapboxDirections({
