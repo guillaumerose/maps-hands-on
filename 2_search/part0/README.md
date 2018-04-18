@@ -18,6 +18,8 @@ Nous allons travailler dans le repository Pelias. Vous pouvez cloner le projet d
 1. Cloner le projet Pelias Dockerfiles dans ~/maps-hands-on/2_search/installation/pelias
 ```shell
 $ git clone https://github.com/pelias/dockerfiles.git ~/maps-hands-on/2_search/installation/pelias
+$ cd ~/maps-hands-on/2_search/installation/pelias
+$ git checkout f6aa6b
 ```
 1. (BIS) Copier/coller le projet Pelias Dockerfiles de DEVOXX_SUPPORT
 ```shell
